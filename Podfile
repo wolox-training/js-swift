@@ -6,7 +6,7 @@ target 'WBooks' do
   use_frameworks!
 
   # Pods for WBooks
-	pod 'Alamofire', '~> 5.2'
+    pod 'Alamofire', '~> 5.2'
 
   target 'WBooksTests' do
     inherit! :search_paths

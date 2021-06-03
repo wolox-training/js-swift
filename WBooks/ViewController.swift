@@ -11,9 +11,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Value from Info.plist
+        let value = Bundle.main.infoDictionary?["example"] as! String
+        print("My value: \(value)")
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func ingresar(_ sender: UIButton) {
+        print("Ingresado")
+    }
+    
 
 }
 
