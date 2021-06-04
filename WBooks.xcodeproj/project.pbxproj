@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5C7E2391DC5BE91B771CFCC3 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */; };
+		6597CD56266A83280009C1A0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CD55266A83280009C1A0 /* NibView.swift */; };
+		6597CD58266A833E0009C1A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CD57266A833E0009C1A0 /* LoginView.swift */; };
+		6597CD5A266A834E0009C1A0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6597CD59266A834E0009C1A0 /* LoginView.xib */; };
+		6597CD5C266A83890009C1A0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6597CD5B266A83890009C1A0 /* LoginController.swift */; };
 		9193828B00730CD800768EDA /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE38CF029A5C45274AB566 /* Pods_WBooks_WBooksUITests.framework */; };
 		BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB81E42669053C00979253 /* AppDelegate.swift */; };
 		BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB81E62669053C00979253 /* SceneDelegate.swift */; };
@@ -42,6 +46,10 @@
 		593FB9DA641D3CA303479209 /* Pods_WBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6B0A8C654941F376093DBE /* Pods-WBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.release.xcconfig"; sourceTree = "<group>"; };
 		5F86B5779801677CC0544BBB /* Pods-WBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.debug.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		6597CD55266A83280009C1A0 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		6597CD57266A833E0009C1A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6597CD59266A834E0009C1A0 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		6597CD5B266A83890009C1A0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DF9488F6C0B542A6F9D555 /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		84E274A4D7A7AB8D3FF0DD3C /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +101,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6597CD53266A82FE0009C1A0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6597CD57266A833E0009C1A0 /* LoginView.swift */,
+				6597CD59266A834E0009C1A0 /* LoginView.xib */,
+				6597CD5B266A83890009C1A0 /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6597CD54266A83170009C1A0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6597CD55266A83280009C1A0 /* NibView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		72A2B1FFFADA79C46EF4C512 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +154,8 @@
 		BFFB81E32669053C00979253 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				6597CD54266A83170009C1A0 /* Shared */,
+				6597CD53266A82FE0009C1A0 /* Login */,
 				BFFB81E42669053C00979253 /* AppDelegate.swift */,
 				BFFB81E62669053C00979253 /* SceneDelegate.swift */,
 				BFFB81E82669053C00979253 /* ViewController.swift */,
@@ -282,6 +310,7 @@
 			files = (
 				BFFB81F12669053D00979253 /* LaunchScreen.storyboard in Resources */,
 				BFFB81EE2669053D00979253 /* Assets.xcassets in Resources */,
+				6597CD5A266A834E0009C1A0 /* LoginView.xib in Resources */,
 				BFFB81EC2669053C00979253 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,8 +439,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6597CD56266A83280009C1A0 /* NibView.swift in Sources */,
+				6597CD5C266A83890009C1A0 /* LoginController.swift in Sources */,
 				BFFB81E92669053C00979253 /* ViewController.swift in Sources */,
 				BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */,
+				6597CD58266A833E0009C1A0 /* LoginView.swift in Sources */,
 				BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
