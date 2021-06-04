@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var textUser: UITextField!
     @IBOutlet weak var textPassword: UITextField!
     

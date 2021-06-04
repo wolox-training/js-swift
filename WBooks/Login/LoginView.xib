@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="textPassword" destination="8qV-Ju-ysy" id="dJj-ku-rtA"/>
+                <outlet property="textUser" destination="DLN-xx-IxL" id="s1O-Un-2a6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="cNQ-ol-PBR">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <stackView contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-YC-ERw">
+                    <rect key="frame" x="20" y="194" width="374" height="68"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLN-xx-IxL">
+                            <rect key="frame" x="10" y="0.0" width="354" height="34"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qV-Ju-ysy">
+                            <rect key="frame" x="10" y="34" width="354" height="34"/>
+                            <attributedString key="attributedText"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="8qV-Ju-ysy" firstAttribute="leading" secondItem="dqj-YC-ERw" secondAttribute="leading" constant="10" id="JMx-Md-gYa"/>
+                        <constraint firstItem="DLN-xx-IxL" firstAttribute="leading" secondItem="dqj-YC-ERw" secondAttribute="leading" constant="10" id="Sem-KQ-ai3"/>
+                        <constraint firstAttribute="trailing" secondItem="8qV-Ju-ysy" secondAttribute="trailing" constant="10" id="bY9-4B-0PA"/>
+                        <constraint firstAttribute="trailing" secondItem="DLN-xx-IxL" secondAttribute="trailing" constant="10" id="kwC-1X-NdQ"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdc-WM-n6e">
+                    <rect key="frame" x="132" y="357" width="150" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="LlU-Hk-31i"/>
+                        <constraint firstAttribute="width" constant="150" id="kNE-nl-fuD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <state key="normal" title="Ingresar">
+                        <color key="titleColor" systemColor="labelColor"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="pushIngresad:" destination="-1" eventType="touchUpInside" id="XdF-Ya-kiM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dqj-YC-ERw" secondAttribute="trailing" constant="20" id="4EU-IK-pDt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cNQ-ol-PBR" secondAttribute="trailing" id="4dk-L7-DBT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gdc-WM-n6e" secondAttribute="trailing" constant="132" id="O3m-c4-1bL"/>
+                <constraint firstItem="Gdc-WM-n6e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="132" id="Q8J-nd-YEb"/>
+                <constraint firstItem="Gdc-WM-n6e" firstAttribute="top" secondItem="dqj-YC-ERw" secondAttribute="bottom" constant="95" id="Wgs-no-9rs"/>
+                <constraint firstItem="dqj-YC-ERw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="150" id="cwr-TR-fUX"/>
+                <constraint firstItem="dqj-YC-ERw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="d8d-4w-tTW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cNQ-ol-PBR" secondAttribute="bottom" id="eiF-4h-pSe"/>
+                <constraint firstItem="cNQ-ol-PBR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hkf-Lx-Z8p"/>
+                <constraint firstItem="cNQ-ol-PBR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="myN-wi-MfJ"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="105"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bc_inicio" width="375" height="667"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
