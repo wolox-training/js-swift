@@ -8,14 +8,17 @@
 import Foundation
 import UIKit
 
+
+
 final class LoginView: NibView {
     
     @IBOutlet weak var textUser: UITextField!
     @IBOutlet weak var textPassword: UITextField!
-    
-    @IBAction func pushIngresad(_ sender: UIButton) {
-    print("Ingresado \(textUser.text!) ")
+        
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        print("Ingresado \(textUser.text!) ")
+        
+        
     }
-    
     
 }

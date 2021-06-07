@@ -56,7 +56,7 @@
                         <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="pushIngresad:" destination="-1" eventType="touchUpInside" id="XdF-Ya-kiM"/>
+                        <action selector="pushIngresar:" destination="-1" eventType="touchUpInside" id="7eb-mE-5Ly"/>
                     </connections>
                 </button>
             </subviews>
