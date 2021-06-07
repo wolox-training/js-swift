@@ -14,11 +14,7 @@ final class LoginView: NibView {
     
     @IBOutlet weak var textUser: UITextField!
     @IBOutlet weak var textPassword: UITextField!
-        
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        print("Ingresado \(textUser.text!) ")
-        
-        
-    }
+    
+    @IBOutlet weak var mainButton: UIButton!
     
 }

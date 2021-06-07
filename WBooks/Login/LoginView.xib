@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="WBooks" customModuleProvider="target">
             <connections>
+                <outlet property="mainButton" destination="Gdc-WM-n6e" id="EgZ-Ae-uv6"/>
                 <outlet property="textPassword" destination="8qV-Ju-ysy" id="dJj-ku-rtA"/>
                 <outlet property="textUser" destination="DLN-xx-IxL" id="s1O-Un-2a6"/>
             </connections>
@@ -55,9 +56,6 @@
                         <color key="titleColor" systemColor="labelColor"/>
                         <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
-                    <connections>
-                        <action selector="pushIngresar:" destination="-1" eventType="touchUpInside" id="7eb-mE-5Ly"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
