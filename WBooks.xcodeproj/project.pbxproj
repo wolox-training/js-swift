@@ -3,18 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5C7E2391DC5BE91B771CFCC3 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */; };
 		9193828B00730CD800768EDA /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE38CF029A5C45274AB566 /* Pods_WBooks_WBooksUITests.framework */; };
+		BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E48266A96B000B61FD0 /* NibView.swift */; };
+		BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4B266A972100B61FD0 /* LoginController.swift */; };
+		BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4D266A979A00B61FD0 /* LoginView.swift */; };
+		BFD65E52266A981800B61FD0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD65E51266A981800B61FD0 /* LoginView.xib */; };
+		BFD65E56266AA64400B61FD0 /* TableBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E55266AA64400B61FD0 /* TableBookView.swift */; };
+		BFD65E58266AA65600B61FD0 /* TableBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD65E57266AA65600B61FD0 /* TableBookView.xib */; };
+		BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E59266AA6C800B61FD0 /* TableBookController.swift */; };
+		BFD65E5D266AA92600B61FD0 /* CellBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E5C266AA92600B61FD0 /* CellBookView.swift */; };
+		BFD65E5F266AA93400B61FD0 /* CellBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD65E5E266AA93400B61FD0 /* CellBookView.xib */; };
 		BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB81E42669053C00979253 /* AppDelegate.swift */; };
 		BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB81E62669053C00979253 /* SceneDelegate.swift */; };
-		BFFB81E92669053C00979253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB81E82669053C00979253 /* ViewController.swift */; };
-		BFFB81EC2669053C00979253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB81EA2669053C00979253 /* Main.storyboard */; };
 		BFFB81EE2669053D00979253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFB81ED2669053D00979253 /* Assets.xcassets */; };
-		BFFB81F12669053D00979253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB81EF2669053D00979253 /* LaunchScreen.storyboard */; };
 		BFFB81FC2669053D00979253 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB81FB2669053D00979253 /* WBooksTests.swift */; };
 		BFFB82072669053D00979253 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB82062669053D00979253 /* WBooksUITests.swift */; };
 		CB42E51DAAE11D8377DAFC38 /* Pods_WBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593FB9DA641D3CA303479209 /* Pods_WBooksTests.framework */; };
@@ -45,13 +51,21 @@
 		7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DF9488F6C0B542A6F9D555 /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		84E274A4D7A7AB8D3FF0DD3C /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		BFD65E48266A96B000B61FD0 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		BFD65E4B266A972100B61FD0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		BFD65E4D266A979A00B61FD0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BFD65E51266A981800B61FD0 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		BFD65E55266AA64400B61FD0 /* TableBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookView.swift; sourceTree = "<group>"; };
+		BFD65E57266AA65600B61FD0 /* TableBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableBookView.xib; sourceTree = "<group>"; };
+		BFD65E59266AA6C800B61FD0 /* TableBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookController.swift; sourceTree = "<group>"; };
+		BFD65E5C266AA92600B61FD0 /* CellBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBookView.swift; sourceTree = "<group>"; };
+		BFD65E5E266AA93400B61FD0 /* CellBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellBookView.xib; sourceTree = "<group>"; };
 		BFFB81E12669053C00979253 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFB81E42669053C00979253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFB81E62669053C00979253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BFFB81E82669053C00979253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BFFB81EB2669053C00979253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFFB81ED2669053D00979253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BFFB81F02669053D00979253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFFB81F22669053D00979253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFB81F72669053D00979253 /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFB81FB2669053D00979253 /* WBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksTests.swift; sourceTree = "<group>"; };
@@ -101,10 +115,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BFD65E47266A969200B61FD0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BFD65E48266A96B000B61FD0 /* NibView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BFD65E4A266A96F600B61FD0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BFD65E4B266A972100B61FD0 /* LoginController.swift */,
+				BFD65E4D266A979A00B61FD0 /* LoginView.swift */,
+				BFD65E51266A981800B61FD0 /* LoginView.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BFD65E53266AA13D00B61FD0 /* ConfigFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */,
+				BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */,
+			);
+			path = ConfigFiles;
+			sourceTree = "<group>";
+		};
+		BFD65E54266AA61F00B61FD0 /* TableBooks */ = {
+			isa = PBXGroup;
+			children = (
+				BFD65E5B266AA91200B61FD0 /* CellBook */,
+				BFD65E55266AA64400B61FD0 /* TableBookView.swift */,
+				BFD65E57266AA65600B61FD0 /* TableBookView.xib */,
+				BFD65E59266AA6C800B61FD0 /* TableBookController.swift */,
+			);
+			path = TableBooks;
+			sourceTree = "<group>";
+		};
+		BFD65E5B266AA91200B61FD0 /* CellBook */ = {
+			isa = PBXGroup;
+			children = (
+				BFD65E5C266AA92600B61FD0 /* CellBookView.swift */,
+				BFD65E5E266AA93400B61FD0 /* CellBookView.xib */,
+			);
+			path = CellBook;
+			sourceTree = "<group>";
+		};
 		BFFB81D82669053C00979253 = {
 			isa = PBXGroup;
 			children = (
 				BFFB81E32669053C00979253 /* WBooks */,
+				BFD65E53266AA13D00B61FD0 /* ConfigFiles */,
 				BFFB81FA2669053D00979253 /* WBooksTests */,
 				BFFB82052669053D00979253 /* WBooksUITests */,
 				BFFB81E22669053C00979253 /* Products */,
@@ -126,12 +188,12 @@
 		BFFB81E32669053C00979253 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				BFD65E54266AA61F00B61FD0 /* TableBooks */,
+				BFD65E4A266A96F600B61FD0 /* Login */,
+				BFD65E47266A969200B61FD0 /* Shared */,
 				BFFB81E42669053C00979253 /* AppDelegate.swift */,
 				BFFB81E62669053C00979253 /* SceneDelegate.swift */,
-				BFFB81E82669053C00979253 /* ViewController.swift */,
-				BFFB81EA2669053C00979253 /* Main.storyboard */,
 				BFFB81ED2669053D00979253 /* Assets.xcassets */,
-				BFFB81EF2669053D00979253 /* LaunchScreen.storyboard */,
 				BFFB81F22669053D00979253 /* Info.plist */,
 			);
 			path = WBooks;
@@ -165,7 +227,6 @@
 				ED8D5F3DF7D7312D1F8A5E4A /* Pods-WBooksTests.debug.xcconfig */,
 				84DF9488F6C0B542A6F9D555 /* Pods-WBooksTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -277,9 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFFB81F12669053D00979253 /* LaunchScreen.storyboard in Resources */,
+				BFD65E58266AA65600B61FD0 /* TableBookView.xib in Resources */,
 				BFFB81EE2669053D00979253 /* Assets.xcassets in Resources */,
-				BFFB81EC2669053C00979253 /* Main.storyboard in Resources */,
+				BFD65E52266A981800B61FD0 /* LoginView.xib in Resources */,
+				BFD65E5F266AA93400B61FD0 /* CellBookView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +469,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFFB81E92669053C00979253 /* ViewController.swift in Sources */,
+				BFD65E56266AA64400B61FD0 /* TableBookView.swift in Sources */,
+				BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */,
+				BFD65E5D266AA92600B61FD0 /* CellBookView.swift in Sources */,
+				BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */,
+				BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */,
 				BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */,
 				BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */,
+				BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,28 +511,10 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		BFFB81EA2669053C00979253 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFFB81EB2669053C00979253 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BFFB81EF2669053D00979253 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFFB81F02669053D00979253 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		BFFB82092669053D00979253 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -527,6 +576,7 @@
 		};
 		BFFB820A2669053D00979253 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
