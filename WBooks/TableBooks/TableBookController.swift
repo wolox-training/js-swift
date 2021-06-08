@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 final class TableBookController: UITableViewController {
-    let cellId = "cellId"
     private lazy var tableBookView = TableBookView()
     
     struct Book {
@@ -22,8 +21,6 @@ final class TableBookController: UITableViewController {
         view = tableBookView
     }
     
-    var booksArray : Array = [["title": "A Little Bird Told Me", "autor": "Timothy Cross", "image": "img_book1.png"], ["title": "When the Doves Disappeared", "autor": "Sofi Oksanen", "image": "img_book2.png"], ["title": "The Best Book in the World", "autor": "Peter Sjernstrom", "image": "img_book3.png"], ["title": "Be Creative", "autor": "Tony Alcazar", "image": "img_book4.png"], ["title": "Redesign the Web", "autor": "Liliana Castilla", "image": "img_book5.png"]]
-    
     var books: [Book] = [Book(title: "A Little Bird Told Me", autor: "Timothy Cross", image: "img_book1.png"), Book(title: "When the Doves Disappeared", autor: "Sofi Oksanen", image: "img_book2.png"), Book(title: "The Best Book in the World", autor: "Peter Sjernstrom", image: "img_book3.png"), Book(title: "Be Creative", autor: "Tony Alcazar", image: "img_book4.png"), Book(title: "Redesign the Web", autor: "Liliana Castilla", image: "img_book5.png")]
 
     
@@ -34,11 +31,29 @@ final class TableBookController: UITableViewController {
         tableBookView.booksTable.dataSource = self
         let nib = UINib(nibName: CellBookView.identifier, bundle: nil)
         tableBookView.booksTable.register(nib, forCellReuseIdentifier: CellBookView.identifier)
+
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return booksArray.count
+//        return books.count
+        return 1
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return books.count
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -46,9 +61,9 @@ final class TableBookController: UITableViewController {
         
         cell.layer.cornerRadius = 16
         
-        cell.titleBook.text = books[indexPath.row].title
-        cell.subtitleBook.text = books[indexPath.row].autor
-        let nameImage: String! = books[indexPath.row].image
+        cell.titleBook.text = books[indexPath.section].title
+        cell.subtitleBook.text = books[indexPath.section].autor
+        let nameImage: String! = books[indexPath.section].image
         cell.imageBook.image = UIImage(named: nameImage)
         
         

@@ -19,11 +19,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ehB-rj-akq">
-                    <rect key="frame" x="10" y="44" width="394" height="808"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="10" y="54" width="394" height="798"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="separatorColor" systemColor="linkColor"/>
                 </tableView>
-                <tableViewCell clipsSubviews="YES" contentMode="center" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="dto-TU-URP">
+                <tableViewCell clipsSubviews="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="dto-TU-URP">
                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dto-TU-URP" id="nv1-Cj-WBA">
@@ -31,13 +31,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableViewCellContentView>
                     <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <edgeInsets key="layoutMargins" top="50" left="8" bottom="50" right="8"/>
                 </tableViewCell>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ehB-rj-akq" secondAttribute="trailing" constant="10" id="7Nq-1w-1IO"/>
-                <constraint firstItem="ehB-rj-akq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="MW9-tP-OGh"/>
+                <constraint firstItem="ehB-rj-akq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="MW9-tP-OGh"/>
                 <constraint firstItem="ehB-rj-akq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="azK-SH-wHa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ehB-rj-akq" secondAttribute="bottom" constant="10" id="ugz-m1-FDr"/>
             </constraints>
@@ -47,9 +48,6 @@
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
