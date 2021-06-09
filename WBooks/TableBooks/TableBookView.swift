@@ -12,5 +12,4 @@ final class TableBookView: NibView {
     
     @IBOutlet var booksTable: UITableView!
     
-    
 }

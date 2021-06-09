@@ -18,20 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ehB-rj-akq">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ehB-rj-akq">
                     <rect key="frame" x="10" y="54" width="394" height="798"/>
                     <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="separatorColor" systemColor="linkColor"/>
                 </tableView>
-                <tableViewCell clipsSubviews="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="dto-TU-URP">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                <tableViewCell clipsSubviews="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="dto-TU-URP">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dto-TU-URP" id="nv1-Cj-WBA">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tableViewCellContentView>
-                    <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <edgeInsets key="layoutMargins" top="50" left="8" bottom="50" right="8"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableViewCell>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
