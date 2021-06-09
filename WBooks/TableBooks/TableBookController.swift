@@ -28,36 +28,18 @@ final class TableBookController: UITableViewController {
 
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return books.count
-        return 1
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
     }
 
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
-    }
-
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
-    }
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         let cell = tableView.dequeueReusableCell(withIdentifier: CellBookView.identifier, for: indexPath) as! CellBookView
-
-        cell.layer.cornerRadius = 16
-
-        cell.titleBook.text = books[indexPath.section].title
-        cell.subtitleBook.text = books[indexPath.section].autor
-        let nameImage: String! = books[indexPath.section].image
-        cell.imageBook.image = UIImage(named: nameImage)
-
+        let book = books[indexPath.item]
+        cell.setup(with: book)
         return cell
     }
 

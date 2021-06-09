@@ -22,6 +22,7 @@
                     <rect key="frame" x="10" y="54" width="394" height="798"/>
                     <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="separatorColor" systemColor="linkColor"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <tableViewCell clipsSubviews="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="dto-TU-URP">
                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>

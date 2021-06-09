@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,70 +14,65 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sog-4L-N78">
-                    <rect key="frame" x="10" y="10" width="394" height="130"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMF-rS-DkC">
+                    <rect key="frame" x="0.0" y="5" width="414" height="140"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CgU-RH-zrK">
-                            <rect key="frame" x="15" y="15" width="80" height="100"/>
+                            <rect key="frame" x="15" y="15" width="73" height="110"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="CgU-RH-zrK" secondAttribute="height" multiplier="4:5" id="2lE-j2-TN2"/>
-                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="S2U-v6-iJQ"/>
-                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Xph-XT-xdi"/>
+                                <constraint firstAttribute="width" constant="73" id="MgY-ck-a4I"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSz-2t-5K5">
-                            <rect key="frame" x="115" y="10" width="259" height="20"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="sSz-2t-5K5" secondAttribute="height" multiplier="259:20" id="DX1-yx-DLp"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTX-uu-RlQ">
-                            <rect key="frame" x="115" y="40" width="259" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="QTX-uu-RlQ" secondAttribute="height" multiplier="259:18" id="Iqb-wF-KxP"/>
-                            </constraints>
+                            <rect key="frame" x="103" y="45.5" width="296" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPA-ld-rNv" userLabel="Title Book">
+                            <rect key="frame" x="103" y="15" width="296" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <viewLayoutGuide key="safeArea" id="IFv-6X-ym6"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="CgU-RH-zrK" firstAttribute="leading" secondItem="Sog-4L-N78" secondAttribute="leading" constant="15" id="9l2-I9-0Wj"/>
-                        <constraint firstAttribute="trailing" secondItem="sSz-2t-5K5" secondAttribute="trailing" constant="20" id="Bo4-k5-qV4"/>
-                        <constraint firstItem="QTX-uu-RlQ" firstAttribute="leading" secondItem="CgU-RH-zrK" secondAttribute="trailing" constant="20" id="Dol-BG-LYf"/>
-                        <constraint firstAttribute="trailing" secondItem="QTX-uu-RlQ" secondAttribute="trailing" constant="20" id="FKP-x9-Sd3"/>
-                        <constraint firstItem="sSz-2t-5K5" firstAttribute="leading" secondItem="CgU-RH-zrK" secondAttribute="trailing" constant="20" id="MkO-3f-7hD"/>
-                        <constraint firstItem="CgU-RH-zrK" firstAttribute="top" secondItem="Sog-4L-N78" secondAttribute="top" constant="15" id="eze-gm-REn"/>
-                        <constraint firstItem="sSz-2t-5K5" firstAttribute="top" secondItem="Sog-4L-N78" secondAttribute="top" constant="10" id="fi9-DQ-bwb"/>
-                        <constraint firstAttribute="width" secondItem="Sog-4L-N78" secondAttribute="height" multiplier="197:65" id="gKN-C8-NIC"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QTX-uu-RlQ" secondAttribute="bottom" constant="10" id="iTU-E2-nqk"/>
-                        <constraint firstItem="QTX-uu-RlQ" firstAttribute="top" secondItem="sSz-2t-5K5" secondAttribute="bottom" constant="10" id="nK0-QD-TGR"/>
-                        <constraint firstAttribute="bottom" secondItem="CgU-RH-zrK" secondAttribute="bottom" constant="15" id="raH-8p-ram"/>
+                        <constraint firstAttribute="bottom" secondItem="CgU-RH-zrK" secondAttribute="bottom" constant="15" id="Bep-k8-Uz6"/>
+                        <constraint firstAttribute="trailing" secondItem="QTX-uu-RlQ" secondAttribute="trailing" constant="15" id="RNz-Ti-cVI"/>
+                        <constraint firstItem="WPA-ld-rNv" firstAttribute="top" secondItem="CMF-rS-DkC" secondAttribute="top" constant="15" id="UM7-ml-jGb"/>
+                        <constraint firstItem="QTX-uu-RlQ" firstAttribute="leading" secondItem="CgU-RH-zrK" secondAttribute="trailing" constant="15" id="VQh-o7-STk"/>
+                        <constraint firstItem="QTX-uu-RlQ" firstAttribute="top" secondItem="WPA-ld-rNv" secondAttribute="bottom" constant="10" id="baO-h6-24R"/>
+                        <constraint firstItem="CgU-RH-zrK" firstAttribute="leading" secondItem="CMF-rS-DkC" secondAttribute="leading" constant="15" id="gzq-Gb-oFC"/>
+                        <constraint firstItem="WPA-ld-rNv" firstAttribute="leading" secondItem="CgU-RH-zrK" secondAttribute="trailing" constant="15" id="jIG-F3-DcF"/>
+                        <constraint firstAttribute="trailing" secondItem="WPA-ld-rNv" secondAttribute="trailing" constant="15" id="zkO-tk-J6y"/>
+                        <constraint firstItem="CgU-RH-zrK" firstAttribute="top" secondItem="CMF-rS-DkC" secondAttribute="top" constant="15" id="zsN-r6-oMD"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Sog-4L-N78" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="GgG-Ku-MGh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Sog-4L-N78" secondAttribute="trailing" constant="10" id="OeM-zQ-vrl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Sog-4L-N78" secondAttribute="bottom" constant="10" id="QDg-od-pMA"/>
+                <constraint firstAttribute="bottom" secondItem="CMF-rS-DkC" secondAttribute="bottom" constant="5" id="1ga-Me-H7c"/>
+                <constraint firstAttribute="trailing" secondItem="CMF-rS-DkC" secondAttribute="trailing" id="UTO-s1-vQe"/>
+                <constraint firstItem="CMF-rS-DkC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="s8q-id-Jbj"/>
+                <constraint firstItem="CMF-rS-DkC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="vFn-Bk-YP2"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="containerView" destination="CMF-rS-DkC" id="0w3-WC-5tc"/>
                 <outlet property="imageBook" destination="CgU-RH-zrK" id="ij8-cW-cVs"/>
                 <outlet property="subtitleBook" destination="QTX-uu-RlQ" id="K4S-bX-vX4"/>
-                <outlet property="titleBook" destination="sSz-2t-5K5" id="XXI-Rw-CIQ"/>
+                <outlet property="titleBook" destination="WPA-ld-rNv" id="iXN-2j-pmk"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
