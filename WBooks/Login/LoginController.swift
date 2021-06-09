@@ -10,7 +10,7 @@ import UIKit
 
 final class LoginController: UIViewController {
 
-    private lazy var loginView: UIView = LoginView()
+    private lazy var loginView = LoginView()
 
 
     override func loadView() {
@@ -19,8 +19,13 @@ final class LoginController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loginView.mainButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
-
+    
+    @objc private func buttonPressed() {
+        let controller = TableBookController()
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+    }
 }
 

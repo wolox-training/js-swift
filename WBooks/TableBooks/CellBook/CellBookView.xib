@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CellBookView" customModule="WBooks" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="center" id="iN0-l3-epB" customClass="CellBookView" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMF-rS-DkC">
+                    <rect key="frame" x="0.0" y="5" width="414" height="140"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CgU-RH-zrK">
+                            <rect key="frame" x="15" y="15" width="73" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="73" id="MgY-ck-a4I"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTX-uu-RlQ">
+                            <rect key="frame" x="103" y="45.5" width="296" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPA-ld-rNv" userLabel="Title Book">
+                            <rect key="frame" x="103" y="15" width="296" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="CgU-RH-zrK" secondAttribute="bottom" constant="15" id="Bep-k8-Uz6"/>
+                        <constraint firstAttribute="trailing" secondItem="QTX-uu-RlQ" secondAttribute="trailing" constant="15" id="RNz-Ti-cVI"/>
+                        <constraint firstItem="WPA-ld-rNv" firstAttribute="top" secondItem="CMF-rS-DkC" secondAttribute="top" constant="15" id="UM7-ml-jGb"/>
+                        <constraint firstItem="QTX-uu-RlQ" firstAttribute="leading" secondItem="CgU-RH-zrK" secondAttribute="trailing" constant="15" id="VQh-o7-STk"/>
+                        <constraint firstItem="QTX-uu-RlQ" firstAttribute="top" secondItem="WPA-ld-rNv" secondAttribute="bottom" constant="10" id="baO-h6-24R"/>
+                        <constraint firstItem="CgU-RH-zrK" firstAttribute="leading" secondItem="CMF-rS-DkC" secondAttribute="leading" constant="15" id="gzq-Gb-oFC"/>
+                        <constraint firstItem="WPA-ld-rNv" firstAttribute="leading" secondItem="CgU-RH-zrK" secondAttribute="trailing" constant="15" id="jIG-F3-DcF"/>
+                        <constraint firstAttribute="trailing" secondItem="WPA-ld-rNv" secondAttribute="trailing" constant="15" id="zkO-tk-J6y"/>
+                        <constraint firstItem="CgU-RH-zrK" firstAttribute="top" secondItem="CMF-rS-DkC" secondAttribute="top" constant="15" id="zsN-r6-oMD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CMF-rS-DkC" secondAttribute="bottom" constant="5" id="1ga-Me-H7c"/>
+                <constraint firstAttribute="trailing" secondItem="CMF-rS-DkC" secondAttribute="trailing" id="UTO-s1-vQe"/>
+                <constraint firstItem="CMF-rS-DkC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="s8q-id-Jbj"/>
+                <constraint firstItem="CMF-rS-DkC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="vFn-Bk-YP2"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="CMF-rS-DkC" id="0w3-WC-5tc"/>
+                <outlet property="imageBook" destination="CgU-RH-zrK" id="ij8-cW-cVs"/>
+                <outlet property="subtitleBook" destination="QTX-uu-RlQ" id="K4S-bX-vX4"/>
+                <outlet property="titleBook" destination="WPA-ld-rNv" id="iXN-2j-pmk"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

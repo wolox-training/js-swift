@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C7E2391DC5BE91B771CFCC3 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */; };
 		9193828B00730CD800768EDA /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE38CF029A5C45274AB566 /* Pods_WBooks_WBooksUITests.framework */; };
+		BF7AA0502670DDA300EB490D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7AA04F2670DDA300EB490D /* Book.swift */; };
 		BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E48266A96B000B61FD0 /* NibView.swift */; };
 		BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4B266A972100B61FD0 /* LoginController.swift */; };
 		BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4D266A979A00B61FD0 /* LoginView.swift */; };
@@ -51,6 +52,7 @@
 		7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DF9488F6C0B542A6F9D555 /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		84E274A4D7A7AB8D3FF0DD3C /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF7AA04F2670DDA300EB490D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BFD65E48266A96B000B61FD0 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				BFFB81E62669053C00979253 /* SceneDelegate.swift */,
 				BFFB81ED2669053D00979253 /* Assets.xcassets */,
 				BFFB81F22669053D00979253 /* Info.plist */,
+				BF7AA04F2670DDA300EB490D /* Book.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				BFD65E5D266AA92600B61FD0 /* CellBookView.swift in Sources */,
 				BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */,
 				BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */,
+				BF7AA0502670DDA300EB490D /* Book.swift in Sources */,
 				BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */,
 				BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */,
 				BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */,
