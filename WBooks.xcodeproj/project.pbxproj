@@ -10,6 +10,8 @@
 		5C7E2391DC5BE91B771CFCC3 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */; };
 		9193828B00730CD800768EDA /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE38CF029A5C45274AB566 /* Pods_WBooks_WBooksUITests.framework */; };
 		BF7AA0502670DDA300EB490D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7AA04F2670DDA300EB490D /* Book.swift */; };
+		BF7AA0532670F3E800EB490D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF7AA0552670F3E800EB490D /* Localizable.strings */; };
+		BF90BE95267108C800DC6562 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90BE94267108C800DC6562 /* TabBarController.swift */; };
 		BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E48266A96B000B61FD0 /* NibView.swift */; };
 		BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4B266A972100B61FD0 /* LoginController.swift */; };
 		BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4D266A979A00B61FD0 /* LoginView.swift */; };
@@ -53,6 +55,9 @@
 		84DF9488F6C0B542A6F9D555 /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		84E274A4D7A7AB8D3FF0DD3C /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF7AA04F2670DDA300EB490D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		BF7AA0542670F3E800EB490D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF90BE94267108C800DC6562 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BFC12AC22670FA0C00BDE671 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BFD65E48266A96B000B61FD0 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
@@ -115,6 +120,14 @@
 				593FB9DA641D3CA303479209 /* Pods_WBooksTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF90BE932671087100DC6562 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BF90BE94267108C800DC6562 /* TabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		BFD65E47266A969200B61FD0 /* Shared */ = {
@@ -190,10 +203,12 @@
 		BFFB81E32669053C00979253 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				BF90BE932671087100DC6562 /* TabBar */,
 				BFD65E54266AA61F00B61FD0 /* TableBooks */,
 				BFD65E4A266A96F600B61FD0 /* Login */,
 				BFD65E47266A969200B61FD0 /* Shared */,
 				BFFB81E42669053C00979253 /* AppDelegate.swift */,
+				BF7AA0552670F3E800EB490D /* Localizable.strings */,
 				BFFB81E62669053C00979253 /* SceneDelegate.swift */,
 				BFFB81ED2669053D00979253 /* Assets.xcassets */,
 				BFFB81F22669053D00979253 /* Info.plist */,
@@ -323,6 +338,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = BFFB81D82669053C00979253;
 			productRefGroup = BFFB81E22669053C00979253 /* Products */;
@@ -341,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7AA0532670F3E800EB490D /* Localizable.strings in Resources */,
 				BFD65E58266AA65600B61FD0 /* TableBookView.xib in Resources */,
 				BFFB81EE2669053D00979253 /* Assets.xcassets in Resources */,
 				BFD65E52266A981800B61FD0 /* LoginView.xib in Resources */,
@@ -475,6 +492,7 @@
 				BFD65E56266AA64400B61FD0 /* TableBookView.swift in Sources */,
 				BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */,
 				BFD65E5D266AA92600B61FD0 /* CellBookView.swift in Sources */,
+				BF90BE95267108C800DC6562 /* TabBarController.swift in Sources */,
 				BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */,
 				BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */,
 				BF7AA0502670DDA300EB490D /* Book.swift in Sources */,
@@ -515,12 +533,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		BF7AA0552670F3E800EB490D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7AA0542670F3E800EB490D /* en */,
+				BFC12AC22670FA0C00BDE671 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		BFFB82092669053D00979253 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -583,6 +614,7 @@
 			baseConfigurationReference = BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
