@@ -25,8 +25,7 @@ final class LoginController: UIViewController {
     }
     
     @objc private func buttonPressed() {
-        let controller = UINavigationController(rootViewController: TableBookController())
-        let controller = WBooksNavigationController(rootViewController: TableBookController())
+        let controller = TabBarController()
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)
     }
