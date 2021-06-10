@@ -1,0 +1,15 @@
+/*
+  Localizable.strings
+  WBooks
+
+  Created by Juan Silva on 09/06/2021.
+  
+*/
+
+/* Titles views */
+"LIBRARY_TITLE" = "LIBRARY";
+
+/* Login Screen */
+"USER_FIELD" = "User";
+"PASSWORD_FIELD" = "Password";
+"LOGIN_BUTTON" = "Log In";

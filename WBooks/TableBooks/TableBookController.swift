@@ -25,6 +25,7 @@ final class TableBookController: UITableViewController {
         let nib = UINib(nibName: CellBookView.identifier, bundle: nil)
         tableBookView.booksTable.register(nib, forCellReuseIdentifier: CellBookView.identifier)
 
+        configurationNavigationBar()
 
     }
     
@@ -42,5 +43,12 @@ final class TableBookController: UITableViewController {
         cell.setup(with: book)
         return cell
     }
-
+    
+    func configurationNavigationBar() {
+        // Set Title
+        navigationItem.title = NSLocalizedString("LIBRARY_TITLE", comment: "Title for the navigation bar")
+        // Set left and right buttons
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications.png"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search.png"), style: .plain, target: nil, action: nil)
+    }
 }

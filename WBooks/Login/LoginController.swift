@@ -12,9 +12,11 @@ final class LoginController: UIViewController {
 
     private lazy var loginView = LoginView()
 
-
     override func loadView() {
         view = loginView
+        loginView.textUser.placeholder = NSLocalizedString("USER_FIELD", comment: "Placeholder user text field")
+        loginView.textPassword.placeholder = NSLocalizedString("PASSWORD_FIELD", comment: "Placeholder password text field")
+        loginView.mainButton.setTitle(NSLocalizedString("LOGIN_BUTTON", comment: "Log In text button"), for: .normal)
     }
 
     override func viewDidLoad() {
@@ -23,7 +25,8 @@ final class LoginController: UIViewController {
     }
     
     @objc private func buttonPressed() {
-        let controller = TableBookController()
+        let controller = UINavigationController(rootViewController: TableBookController())
+        let controller = WBooksNavigationController(rootViewController: TableBookController())
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)
     }
