@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ehB-rj-akq">
-                    <rect key="frame" x="10" y="10" width="394" height="876"/>
+                    <rect key="frame" x="10" y="114" width="394" height="772"/>
                     <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="separatorColor" systemColor="linkColor"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,19 +34,27 @@
                     </tableViewCellContentView>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableViewCell>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Psw-V1-SeM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Psw-V1-SeM" secondAttribute="trailing" id="3Y8-Y2-zJJ"/>
                 <constraint firstAttribute="trailing" secondItem="ehB-rj-akq" secondAttribute="trailing" constant="10" id="7Nq-1w-1IO"/>
-                <constraint firstItem="ehB-rj-akq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="MW9-tP-OGh"/>
+                <constraint firstItem="Psw-V1-SeM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K9r-KM-Ddu"/>
+                <constraint firstItem="ehB-rj-akq" firstAttribute="top" secondItem="Psw-V1-SeM" secondAttribute="bottom" constant="12" id="MW9-tP-OGh"/>
                 <constraint firstItem="ehB-rj-akq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="azK-SH-wHa"/>
+                <constraint firstItem="Psw-V1-SeM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tiu-39-1sO"/>
                 <constraint firstAttribute="bottom" secondItem="ehB-rj-akq" secondAttribute="bottom" constant="10" id="ugz-m1-FDr"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
         </view>
     </objects>
     <resources>
+        <image name="bc_nav bar" width="375" height="102"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

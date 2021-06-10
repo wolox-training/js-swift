@@ -46,13 +46,12 @@ final class TableBookController: UITableViewController {
     
     
     func configurationNavigationBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "bc_nav bar"), for: .default)
-//        Set Title
-        navigationItem.title = NSLocalizedString("LIBRARY_TITLE", comment: "")
-//        Set left and right buttons
+        // Set Title
+        navigationItem.title = NSLocalizedString("LIBRARY_TITLE", comment: "Title for the navigation bar")
+        // Set left and right buttons
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications.png"), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search.png"), style: .plain, target: nil, action: nil)
-//        Set button color
+        // Set button color
         navigationController?.navigationBar.tintColor = .white
 
     }

@@ -9,3 +9,7 @@
 /* Titles views */
 "LIBRARY_TITLE" = "BIBLIOTECA";
 
+/* Login Screen */
+"USER_FIELD" = "Usuario";
+"PASSWORD_FIELD" = "Contraseña";
+"LOGIN_BUTTON" = "Ingresar";
