@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		5C7E2391DC5BE91B771CFCC3 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */; };
 		9193828B00730CD800768EDA /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE38CF029A5C45274AB566 /* Pods_WBooks_WBooksUITests.framework */; };
-		BF18907F2672743400C95A29 /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18907E2672743400C95A29 /* NavBarController.swift */; };
+		BF18907F2672743400C95A29 /* WBooksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18907E2672743400C95A29 /* WBooksNavigationController.swift */; };
 		BF7AA0502670DDA300EB490D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7AA04F2670DDA300EB490D /* Book.swift */; };
 		BF7AA0532670F3E800EB490D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF7AA0552670F3E800EB490D /* Localizable.strings */; };
-		BF90BE95267108C800DC6562 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90BE94267108C800DC6562 /* TabBarController.swift */; };
 		BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E48266A96B000B61FD0 /* NibView.swift */; };
 		BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4B266A972100B61FD0 /* LoginController.swift */; };
 		BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4D266A979A00B61FD0 /* LoginView.swift */; };
@@ -55,10 +54,9 @@
 		7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DF9488F6C0B542A6F9D555 /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		84E274A4D7A7AB8D3FF0DD3C /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF18907E2672743400C95A29 /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
+		BF18907E2672743400C95A29 /* WBooksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksNavigationController.swift; sourceTree = "<group>"; };
 		BF7AA04F2670DDA300EB490D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BF7AA0542670F3E800EB490D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BF90BE94267108C800DC6562 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BFC12AC22670FA0C00BDE671 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -114,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		659227E42672870E003FD86B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BF18907E2672743400C95A29 /* WBooksNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		72A2B1FFFADA79C46EF4C512 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,14 +128,6 @@
 				593FB9DA641D3CA303479209 /* Pods_WBooksTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF90BE932671087100DC6562 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				BF90BE94267108C800DC6562 /* TabBarController.swift */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		BFD65E47266A969200B61FD0 /* Shared */ = {
@@ -205,7 +203,7 @@
 		BFFB81E32669053C00979253 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
-				BF90BE932671087100DC6562 /* TabBar */,
+				659227E42672870E003FD86B /* Navigation */,
 				BFD65E54266AA61F00B61FD0 /* TableBooks */,
 				BFD65E4A266A96F600B61FD0 /* Login */,
 				BFD65E47266A969200B61FD0 /* Shared */,
@@ -215,7 +213,6 @@
 				BFFB81ED2669053D00979253 /* Assets.xcassets */,
 				BFFB81F22669053D00979253 /* Info.plist */,
 				BF7AA04F2670DDA300EB490D /* Book.swift */,
-				BF18907E2672743400C95A29 /* NavBarController.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -495,8 +492,7 @@
 				BFD65E56266AA64400B61FD0 /* TableBookView.swift in Sources */,
 				BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */,
 				BFD65E5D266AA92600B61FD0 /* CellBookView.swift in Sources */,
-				BF18907F2672743400C95A29 /* NavBarController.swift in Sources */,
-				BF90BE95267108C800DC6562 /* TabBarController.swift in Sources */,
+				BF18907F2672743400C95A29 /* WBooksNavigationController.swift in Sources */,
 				BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */,
 				BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */,
 				BF7AA0502670DDA300EB490D /* Book.swift in Sources */,
