@@ -25,8 +25,6 @@ final class TableBookController: UITableViewController {
         let nib = UINib(nibName: CellBookView.identifier, bundle: nil)
         tableBookView.booksTable.register(nib, forCellReuseIdentifier: CellBookView.identifier)
 
-//        Volver a LIBRARY
-//        navigationController?.pushViewController(LoginController(), animated: true)
         configurationNavigationBar()
 
     }
