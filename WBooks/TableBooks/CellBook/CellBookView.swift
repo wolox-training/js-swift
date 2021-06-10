@@ -18,8 +18,6 @@ final class CellBookView: UITableViewCell {
     @IBOutlet weak var subtitleBook: UILabel!
     @IBOutlet weak var imageBook: UIImageView!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none

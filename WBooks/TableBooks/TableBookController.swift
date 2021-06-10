@@ -44,15 +44,11 @@ final class TableBookController: UITableViewController {
         return cell
     }
     
-    
     func configurationNavigationBar() {
         // Set Title
         navigationItem.title = NSLocalizedString("LIBRARY_TITLE", comment: "Title for the navigation bar")
         // Set left and right buttons
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications.png"), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search.png"), style: .plain, target: nil, action: nil)
-        // Set button color
-        navigationController?.navigationBar.tintColor = .white
-
     }
 }
