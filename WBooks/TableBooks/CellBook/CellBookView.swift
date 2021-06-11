@@ -25,10 +25,10 @@ final class CellBookView: UITableViewCell {
         containerView.layer.cornerRadius = 16
     }
     
-    func setup(with book: Book) {
-        titleBook.text = book.title
-        subtitleBook.text = book.autor
-        imageBook.image = UIImage(named: book.image)
+    func configureCell(whit viewModel: CellBookViewModel) {
+        titleBook.text = viewModel.title
+        subtitleBook.text = viewModel.autor
+        imageBook.image = UIImage(named: viewModel.image)
     }
     
 }
