@@ -9,6 +9,13 @@
 /* Titles views */
 "LIBRARY_TITLE" = "BIBLIOTECA";
 
+/* TabBar titles */
+"LIBRARY_TABBAR" = "Biblioteca";
+"WHISLIST_TABBAR" = "Lista de deseos";
+"ADDNEW_TABBAR" = "Agregar";
+"RENTALS_TABBAR" = "Alquilados";
+"SETTINGS_TABBAR" = "Ajustes";
+
 /* Login Screen */
 "USER_FIELD" = "Usuario";
 "PASSWORD_FIELD" = "Contraseña";

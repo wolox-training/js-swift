@@ -9,6 +9,13 @@
 /* Titles views */
 "LIBRARY_TITLE" = "LIBRARY";
 
+/* TabBar titles */
+"LIBRARY_TABBAR" = "Library";
+"WHISLIST_TABBAR" = "Whislist";
+"ADDNEW_TABBAR" = "Add New";
+"RENTALS_TABBAR" = "Rentals";
+"SETTINGS_TABBAR" = "Settings";
+
 /* Login Screen */
 "USER_FIELD" = "User";
 "PASSWORD_FIELD" = "Password";

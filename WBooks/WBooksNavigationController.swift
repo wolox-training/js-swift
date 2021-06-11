@@ -24,5 +24,6 @@ final class WBooksNavigationController: UINavigationController {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().isTranslucent = true
         navigationBar.tintColor = .white
+        
     }
 }
