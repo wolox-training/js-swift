@@ -28,7 +28,21 @@ final class CellBookView: UITableViewCell {
     func configureCell(with viewModel: CellBookViewModel) {
         titleBook.text = viewModel.title
         subtitleBook.text = viewModel.autor
-        imageBook.image = UIImage(named: viewModel.image)
+        
+        if let url = URL(string: viewModel.image) {
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        self.imageBook.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        // let url = URL(string: viewModel.image)
+        // let data = try? Data(contentsOf: url)
+        // imageBook.image = UIImage(data: data!)
     }
+    
+   
     
 }

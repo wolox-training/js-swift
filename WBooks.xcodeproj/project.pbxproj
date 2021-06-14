@@ -15,6 +15,7 @@
 		BF7AA0532670F3E800EB490D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF7AA0552670F3E800EB490D /* Localizable.strings */; };
 		BF90CA3A267383C4006D5F2E /* TableBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90CA39267383C4006D5F2E /* TableBookViewModel.swift */; };
 		BF90CA3C267383DF006D5F2E /* CellBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90CA3B267383DF006D5F2E /* CellBookViewModel.swift */; };
+		BF90CA3F2673ADDC006D5F2E /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90CA3E2673ADDC006D5F2E /* BookRepository.swift */; };
 		BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E48266A96B000B61FD0 /* NibView.swift */; };
 		BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4B266A972100B61FD0 /* LoginController.swift */; };
 		BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4D266A979A00B61FD0 /* LoginView.swift */; };
@@ -63,6 +64,7 @@
 		BF7AA0542670F3E800EB490D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF90CA39267383C4006D5F2E /* TableBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookViewModel.swift; sourceTree = "<group>"; };
 		BF90CA3B267383DF006D5F2E /* CellBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBookViewModel.swift; sourceTree = "<group>"; };
+		BF90CA3E2673ADDC006D5F2E /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		BFC12AC22670FA0C00BDE671 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 				593FB9DA641D3CA303479209 /* Pods_WBooksTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF90CA3D2673ADAB006D5F2E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BF90CA3E2673ADDC006D5F2E /* BookRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		BFD65E47266A969200B61FD0 /* Shared */ = {
@@ -211,6 +221,7 @@
 		BFFB81E32669053C00979253 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				BF90CA3D2673ADAB006D5F2E /* Repository */,
 				BFE9BF132672911600C21494 /* TabBar */,
 				BFD65E54266AA61F00B61FD0 /* TableBooks */,
 				BFD65E4A266A96F600B61FD0 /* Login */,
@@ -505,6 +516,7 @@
 				BF18907F2672743400C95A29 /* WBooksNavigationController.swift in Sources */,
 				BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */,
 				BF90CA3A267383C4006D5F2E /* TableBookViewModel.swift in Sources */,
+				BF90CA3F2673ADDC006D5F2E /* BookRepository.swift in Sources */,
 				BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */,
 				BF7AA0502670DDA300EB490D /* Book.swift in Sources */,
 				BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */,

@@ -29,6 +29,7 @@ final class TableBookController: UITableViewController {
         super.viewDidLoad()
         configurationTable()
         configurationNavigationBar()
+        loadBooks()
     }
     
     func configurationTable() {
@@ -36,6 +37,18 @@ final class TableBookController: UITableViewController {
         tableBookView.booksTable.dataSource = self
         let nib = UINib(nibName: CellBookView.identifier, bundle: nil)
         tableBookView.booksTable.register(nib, forCellReuseIdentifier: CellBookView.identifier)
+    }
+    
+    func loadBooks() {
+        tableBookViewModel.fetchBook(onSuccess: self.reloadTable, onError: self.showError)
+    }
+    
+    func reloadTable() {
+        tableBookView.booksTable.reloadData()
+    }
+    
+    func showError(error: Error) {
+//        BUSCAR FORMATO ERROR
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
