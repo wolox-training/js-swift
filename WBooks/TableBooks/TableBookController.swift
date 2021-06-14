@@ -40,7 +40,7 @@ final class TableBookController: UITableViewController {
     }
     
     func loadBooks() {
-        tableBookViewModel.fetchBook(onSuccess: self.reloadTable, onError: self.showError)
+        tableBookViewModel.fetchBook(onSuccess: { [weak self] in self?.reloadTable() }, onError: { [weak self] eror in self?.showError(error: eror) })
     }
     
     func reloadTable() {
@@ -48,7 +48,11 @@ final class TableBookController: UITableViewController {
     }
     
     func showError(error: Error) {
-//        BUSCAR FORMATO ERROR
+        let alert = UIAlertController(title: NSLocalizedString("ALERT_ERROR_TITLE", comment: "Title error"),
+                                      message: NSLocalizedString("ALERT_ERROR_MESSAGE", comment: "Message erro"),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("ALERT_ERROR_CLOSE", comment: "Default action"), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

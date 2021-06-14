@@ -8,12 +8,11 @@
 import Foundation
 
 class TableBookViewModel {
-//    private var books: [Book] = [Book(title: "A Little Bird Told Me", autor: "Timothy Cross", image: "img_book1.png"), Book(title: "When the Doves Disappeared", autor: "Sofi Oksanen", image: "img_book2.png"), Book(title: "The Best Book in the World", autor: "Peter Sjernstrom", image: "img_book3.png"), Book(title: "Be Creative", autor: "Tony Alcazar", image: "img_book4.png"), Book(title: "Redesign the Web", autor: "Liliana Castilla", image: "img_book5.png")]
     private var books: [Book] = []
-    let repositoryBook: BookRepository
+    private let repositoryBook: BookRepositoryProtocol
     
     
-    init(repositoryBook: BookRepository = BookRepository()) {
+    init(repositoryBook: BookRepositoryProtocol = BookRepository()) {
         self.repositoryBook = repositoryBook
     }
     

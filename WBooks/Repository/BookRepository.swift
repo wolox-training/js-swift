@@ -8,10 +8,16 @@
 import Foundation
 import Alamofire
 
-public class BookRepository {
+protocol BookRepositoryProtocol {
+    func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void)
+}
+
+public class BookRepository: BookRepositoryProtocol {
+    private static let baseURL: String = "https://ios-training-backend.herokuapp.com/api/v1"
+    private static let booksPath: String = "/books"
     
     func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
-        let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books")!
+        guard let url = URL(string: "\(BookRepository.baseURL)\(BookRepository.booksPath)") else { return }
         AF
             .request(url, method: .get)
             .responseJSON(completionHandler: { response in
