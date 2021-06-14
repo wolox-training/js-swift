@@ -10,10 +10,10 @@ import UIKit
 
 final class TableBookController: UITableViewController {
     private lazy var tableBookView = TableBookView()
-    private let bookViewModel: TableBookViewModel
+    let tableBookViewModel: TableBookViewModel
     
     init(bookViewModel: TableBookViewModel) {
-        self.bookViewModel = bookViewModel
+        self.tableBookViewModel = bookViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -43,13 +43,13 @@ final class TableBookController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookViewModel.numberOfBooks
+        return tableBookViewModel.numberOfBooks
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellBookView.identifier, for: indexPath) as! CellBookView
-        let bookCell = bookViewModel.createBookCellViewModel(at: indexPath)
-        cell.configureCell(whit: bookCell)
+        let bookCell = tableBookViewModel.createBookCellViewModel(at: indexPath)
+        cell.configureCell(with: bookCell)
         return cell
     }
     

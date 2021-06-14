@@ -8,7 +8,7 @@
 import Foundation
 
 final class CellBookViewModel {
-    private var book: Book
+    private let book: Book
     
     init(book: Book) {
         self.book = book
