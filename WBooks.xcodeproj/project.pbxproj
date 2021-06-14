@@ -13,6 +13,8 @@
 		BF69C6EC2672919200E618B8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69C6EB2672919200E618B8 /* TabBarController.swift */; };
 		BF7AA0502670DDA300EB490D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7AA04F2670DDA300EB490D /* Book.swift */; };
 		BF7AA0532670F3E800EB490D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF7AA0552670F3E800EB490D /* Localizable.strings */; };
+		BF90CA3A267383C4006D5F2E /* TableBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90CA39267383C4006D5F2E /* TableBookViewModel.swift */; };
+		BF90CA3C267383DF006D5F2E /* CellBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90CA3B267383DF006D5F2E /* CellBookViewModel.swift */; };
 		BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E48266A96B000B61FD0 /* NibView.swift */; };
 		BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4B266A972100B61FD0 /* LoginController.swift */; };
 		BFD65E4E266A979A00B61FD0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD65E4D266A979A00B61FD0 /* LoginView.swift */; };
@@ -59,6 +61,8 @@
 		BF69C6EB2672919200E618B8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = WBooks/TabBarController.swift; sourceTree = SOURCE_ROOT; };
 		BF7AA04F2670DDA300EB490D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BF7AA0542670F3E800EB490D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF90CA39267383C4006D5F2E /* TableBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookViewModel.swift; sourceTree = "<group>"; };
+		BF90CA3B267383DF006D5F2E /* CellBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBookViewModel.swift; sourceTree = "<group>"; };
 		BFC12AC22670FA0C00BDE671 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFC1AA3F26691A9500AB8A65 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BFC1AA4026691ABA00AB8A65 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				BFD65E55266AA64400B61FD0 /* TableBookView.swift */,
 				BFD65E57266AA65600B61FD0 /* TableBookView.xib */,
 				BFD65E59266AA6C800B61FD0 /* TableBookController.swift */,
+				BF90CA39267383C4006D5F2E /* TableBookViewModel.swift */,
 			);
 			path = TableBooks;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			children = (
 				BFD65E5C266AA92600B61FD0 /* CellBookView.swift */,
 				BFD65E5E266AA93400B61FD0 /* CellBookView.xib */,
+				BF90CA3B267383DF006D5F2E /* CellBookViewModel.swift */,
 			);
 			path = CellBook;
 			sourceTree = "<group>";
@@ -498,10 +504,12 @@
 				BFD65E5D266AA92600B61FD0 /* CellBookView.swift in Sources */,
 				BF18907F2672743400C95A29 /* WBooksNavigationController.swift in Sources */,
 				BFD65E49266A96B000B61FD0 /* NibView.swift in Sources */,
+				BF90CA3A267383C4006D5F2E /* TableBookViewModel.swift in Sources */,
 				BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */,
 				BF7AA0502670DDA300EB490D /* Book.swift in Sources */,
 				BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */,
 				BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */,
+				BF90CA3C267383DF006D5F2E /* CellBookViewModel.swift in Sources */,
 				BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
