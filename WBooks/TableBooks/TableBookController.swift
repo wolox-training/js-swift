@@ -40,16 +40,20 @@ final class TableBookController: UITableViewController {
     }
     
     func loadBooks() {
-        tableBookViewModel.fetchBook(onSuccess: { [weak self] in self?.reloadTable() }, onError: { [weak self] eror in self?.showError(error: eror) })
+        tableBookViewModel.fetchBook(onSuccess: { [weak self] in
+            self?.reloadTable()
+        }, onError: { [weak self] error in
+            self?.showError(error: error)
+        })
     }
     
-    func reloadTable() {
+    private func reloadTable() {
         tableBookView.booksTable.reloadData()
     }
     
     func showError(error: Error) {
         let alert = UIAlertController(title: NSLocalizedString("ALERT_ERROR_TITLE", comment: "Title error"),
-                                      message: NSLocalizedString("ALERT_ERROR_MESSAGE", comment: "Message erro"),
+                                      message: NSLocalizedString("ALERT_ERROR_MESSAGE", comment: "Message error"),
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("ALERT_ERROR_CLOSE", comment: "Default action"), style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
