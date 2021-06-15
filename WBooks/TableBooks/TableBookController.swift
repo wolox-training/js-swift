@@ -74,6 +74,13 @@ final class TableBookController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bookDetailsViewModel = tableBookViewModel.createBookDetailsViewModel(at: indexPath)
+        let bookDetailsController = BookDetailsController(viewModel: bookDetailsViewModel)
+        bookDetailsController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(bookDetailsController, animated: true)
+    }
+    
     func configurationNavigationBar() {
         // Set Title
         navigationItem.title = NSLocalizedString("LIBRARY_TITLE", comment: "Title for the navigation bar")
