@@ -28,7 +28,10 @@ final class CellBookView: UITableViewCell {
     func configureCell(with viewModel: CellBookViewModel) {
         titleBook.text = viewModel.title
         subtitleBook.text = viewModel.autor
-        imageBook.image = UIImage(named: viewModel.image)
+        imageBook.load(from: viewModel.image)
+        
     }
+    
+   
     
 }

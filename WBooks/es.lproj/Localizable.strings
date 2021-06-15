@@ -20,3 +20,8 @@
 "USER_FIELD" = "Usuario";
 "PASSWORD_FIELD" = "Contraseña";
 "LOGIN_BUTTON" = "Ingresar";
+
+/* Error alert */
+"ALERT_ERROR_TITLE" = "Error";
+"ALERT_ERROR_MESSAGE" = "Error al cargar los datos";
+"ALERT_ERROR_CLOSE" = "Cerrar";

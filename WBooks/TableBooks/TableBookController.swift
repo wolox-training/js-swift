@@ -29,6 +29,7 @@ final class TableBookController: UITableViewController {
         super.viewDidLoad()
         configurationTable()
         configurationNavigationBar()
+        loadBooks()
     }
     
     func configurationTable() {
@@ -36,6 +37,26 @@ final class TableBookController: UITableViewController {
         tableBookView.booksTable.dataSource = self
         let nib = UINib(nibName: CellBookView.identifier, bundle: nil)
         tableBookView.booksTable.register(nib, forCellReuseIdentifier: CellBookView.identifier)
+    }
+    
+    func loadBooks() {
+        tableBookViewModel.fetchBook(onSuccess: { [weak self] in
+            self?.reloadTable()
+        }, onError: { [weak self] error in
+            self?.showError(error: error)
+        })
+    }
+    
+    private func reloadTable() {
+        tableBookView.booksTable.reloadData()
+    }
+    
+    func showError(error: Error) {
+        let alert = UIAlertController(title: NSLocalizedString("ALERT_ERROR_TITLE", comment: "Title error"),
+                                      message: NSLocalizedString("ALERT_ERROR_MESSAGE", comment: "Message error"),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("ALERT_ERROR_CLOSE", comment: "Default action"), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

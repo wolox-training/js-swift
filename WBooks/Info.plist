@@ -60,5 +60,10 @@
 	</array>
 	<key>example</key>
 	<string>$(EXAMPLE)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

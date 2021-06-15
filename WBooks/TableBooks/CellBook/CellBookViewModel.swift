@@ -19,7 +19,7 @@ final class CellBookViewModel {
     }
     
     var autor: String {
-        return book.autor
+        return book.author
     }
     
     var image: String {
