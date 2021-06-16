@@ -16,8 +16,18 @@ final class InfoBookSectionView: NibView {
     @IBOutlet weak var authorBook: UILabel!
     @IBOutlet weak var genreBook: UILabel!
     @IBOutlet weak var yearBook: UILabel!
-    @IBOutlet weak var addToWishListButton: UIButton!
-    @IBOutlet weak var rentButton: UIButton!
+    @IBOutlet weak var addToWishListButton: UIButton! {
+        didSet {
+            addToWishListButton.layer.cornerRadius = 16
+            addToWishListButton.layer.borderColor = UIColor(red: 0/255.0, green: 173/255.0, blue: 238/255.0, alpha: 1).cgColor
+            addToWishListButton.layer.borderWidth = 3
+        }
+    }
+    @IBOutlet weak var rentButton: UIButton! {
+        didSet {
+            rentButton.layer.cornerRadius = 16
+        }
+    }
     
     func configuration(with viewModel: InfoBookSectionViewModel) {
         titleBook.text = viewModel.title
