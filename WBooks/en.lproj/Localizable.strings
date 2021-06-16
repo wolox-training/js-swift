@@ -8,6 +8,7 @@
 
 /* Titles views */
 "LIBRARY_TITLE" = "LIBRARY";
+"BOOK_DETAIL_TITLE" = "BOOK DETAIL";
 
 /* TabBar titles */
 "LIBRARY_TABBAR" = "Library";
@@ -21,7 +22,17 @@
 "PASSWORD_FIELD" = "Password";
 "LOGIN_BUTTON" = "Log In";
 
+/* Book Details Screen */
+"ADD_TO_WISHLIST_BUTTON" = "ADD TO WISHLIST";
+"RENT_BUTTON" = "RENT";
+
+/* Rent alert */
+"ALERT_RENT_SUCCESS_TITLE" = "Rented";
+"ALERT_RENT_SUCCESS_MESSAGE" = "Book rented successfully";
+
 /* Error alert */
 "ALERT_ERROR_TITLE" = "Error";
 "ALERT_ERROR_MESSAGE" = "Loading data fails";
 "ALERT_ERROR_CLOSE" = "Close";
+"ALERT_UNAVAILABLE_BOOK_MESSAGE" = "The book is unavailable";
+"ALERT_RENT_ERORR_MESSAGE" = "Rent book fails";

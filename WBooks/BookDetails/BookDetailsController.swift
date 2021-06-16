@@ -29,15 +29,19 @@ final class BookDetailsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        addInfoSection(infoBookSectionController)
+        configurationNavigationBar()
+        addInfoSection(infoBookSectionController)
     }
 
     private func addInfoSection(_ child: UIViewController) {
         addChild(child)
-//        bookDetailsView.sectionContainer.addArrangedSubview(child.view)
-//        child.view.frame = bookDetailsView.sectionContainer.frame
-        child.view.frame = bookDetailsView.frame
-        bookDetailsView.addSubview(child.view)
+        bookDetailsView.sections.addArrangedSubview(child.view)
+        child.view.frame = bookDetailsView.sections.frame
         child.didMove(toParent: self)
+    }
+    
+    func configurationNavigationBar() {
+        // Set Title
+        navigationItem.title = NSLocalizedString("BOOK_DETAIL_TITLE", comment: "Title for the navigation bar")
     }
 }

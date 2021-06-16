@@ -8,6 +8,7 @@
 
 /* Titles views */
 "LIBRARY_TITLE" = "BIBLIOTECA";
+"BOOK_DETAIL_TITLE" = "DETALLES LIBRO";
 
 /* TabBar titles */
 "LIBRARY_TABBAR" = "Biblioteca";
@@ -21,7 +22,17 @@
 "PASSWORD_FIELD" = "Contraseña";
 "LOGIN_BUTTON" = "Ingresar";
 
+/* Book Details Screen */
+"ADD_TO_WISHLIST_BUTTON" = "AGREGAR A LA LISTA DE DESEOS";
+"RENT_BUTTON" = "RESERVAR";
+
+/* Rent alert */
+"ALERT_RENT_SUCCESS_TITLE" = "Alqulado";
+"ALERT_RENT_SUCCESS_MESSAGE" = "Libro alquilado con exito";
+
 /* Error alert */
 "ALERT_ERROR_TITLE" = "Error";
 "ALERT_ERROR_MESSAGE" = "Error al cargar los datos";
 "ALERT_ERROR_CLOSE" = "Cerrar";
+"ALERT_UNAVAILABLE_BOOK_MESSAGE" = "El libro no esta disponible";
+"ALERT_RENT_ERORR_MESSAGE" = "Alquilar libro fallo";

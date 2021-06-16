@@ -9,4 +9,5 @@ import Foundation
 import UIKit
 
 final class BookDetailsView: NibView {
+    @IBOutlet weak var sections: UIStackView!
 }

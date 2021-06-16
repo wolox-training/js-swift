@@ -9,9 +9,11 @@ import Foundation
 
 class InfoBookSectionViewModel {
     private let book: Book
+    private let rentRepository: RentRepositoryProtocol
     
-    init(book: Book) {
+    init(book: Book, rentRepository: RentRepositoryProtocol = RentRepository()) {
         self.book = book
+        self.rentRepository = rentRepository
     }
     
     var title: String {
@@ -32,5 +34,16 @@ class InfoBookSectionViewModel {
     
     var genre: String {
         return book.genre
+    }
+    
+    var status: Status{
+        return book.status
+    }
+    
+    func rentBook(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+        let onRentSuccess = { [weak self] (rent: Rent) in
+            onSuccess()
+        }
+        rentRepository.rentBook(bookId: book.id, onSuccess: onRentSuccess, onError: onError)
     }
 }

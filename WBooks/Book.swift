@@ -14,5 +14,10 @@ struct Book: Codable {
     let genre: String
     let year: String
     let image: String
+    let status: Status
 }
 
+enum Status: String, Codable {
+    case available = "Available"
+    case unavailable = "Unavailable"
+}

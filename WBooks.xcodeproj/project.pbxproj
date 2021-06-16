@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C7E2391DC5BE91B771CFCC3 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */; };
 		9193828B00730CD800768EDA /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE38CF029A5C45274AB566 /* Pods_WBooks_WBooksUITests.framework */; };
+		BF02A6BB26792EA000B7C60D /* RentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02A6BA26792EA000B7C60D /* RentRepository.swift */; };
+		BF02A6BD26793D2900B7C60D /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02A6BC26793D2900B7C60D /* Rent.swift */; };
 		BF06D6862677A2C6007C5388 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06D6852677A2C6007C5388 /* UIImageView.swift */; };
 		BF06D68D2677C725007C5388 /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06D68C2677C725007C5388 /* BookDetailsViewModel.swift */; };
 		BF06D6962677D000007C5388 /* BookDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06D6942677D000007C5388 /* BookDetailsController.swift */; };
@@ -67,6 +69,8 @@
 		7F454185BF3A203B05B1CE50 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DF9488F6C0B542A6F9D555 /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		84E274A4D7A7AB8D3FF0DD3C /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF02A6BA26792EA000B7C60D /* RentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRepository.swift; sourceTree = "<group>"; };
+		BF02A6BC26793D2900B7C60D /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Rent.swift; path = WBooks/Rent.swift; sourceTree = SOURCE_ROOT; };
 		BF06D6852677A2C6007C5388 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = WBooks/UIImageView.swift; sourceTree = SOURCE_ROOT; };
 		BF06D68C2677C725007C5388 /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		BF06D6942677D000007C5388 /* BookDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				BF90CA3E2673ADDC006D5F2E /* BookRepository.swift */,
+				BF02A6BA26792EA000B7C60D /* RentRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				BFFB81E62669053C00979253 /* SceneDelegate.swift */,
 				BFFB81ED2669053D00979253 /* Assets.xcassets */,
 				BFFB81F22669053D00979253 /* Info.plist */,
+				BF02A6BC26793D2900B7C60D /* Rent.swift */,
 				BF7AA04F2670DDA300EB490D /* Book.swift */,
 				BF06D6852677A2C6007C5388 /* UIImageView.swift */,
 				BF18907E2672743400C95A29 /* WBooksNavigationController.swift */,
@@ -579,7 +585,9 @@
 				BFD65E5A266AA6C800B61FD0 /* TableBookController.swift in Sources */,
 				BF7AA0502670DDA300EB490D /* Book.swift in Sources */,
 				BF06D68D2677C725007C5388 /* BookDetailsViewModel.swift in Sources */,
+				BF02A6BD26793D2900B7C60D /* Rent.swift in Sources */,
 				BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */,
+				BF02A6BB26792EA000B7C60D /* RentRepository.swift in Sources */,
 				BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */,
 				BF90CA3C267383DF006D5F2E /* CellBookViewModel.swift in Sources */,
 				BFD65E4C266A972100B61FD0 /* LoginController.swift in Sources */,

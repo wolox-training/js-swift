@@ -4,27 +4,41 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailsView" customModule="WBooks" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="sections" destination="UYc-4K-cfv" id="hOu-Fi-h2e"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-4K-cfv">
+                    <rect key="frame" x="20" y="122" width="374" height="720"/>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-tU-bbf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+                </imageView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UYc-4K-cfv" secondAttribute="trailing" constant="20" id="09m-Zp-d2Q"/>
+                <constraint firstItem="Ng9-tU-bbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GXQ-Lu-Cvu"/>
+                <constraint firstItem="UYc-4K-cfv" firstAttribute="top" secondItem="Ng9-tU-bbf" secondAttribute="bottom" constant="20" id="Sic-8M-y1w"/>
+                <constraint firstAttribute="bottom" secondItem="UYc-4K-cfv" secondAttribute="bottom" constant="54" id="ZKI-W8-MNO"/>
+                <constraint firstItem="UYc-4K-cfv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="i94-bx-Ymq"/>
+                <constraint firstItem="Ng9-tU-bbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jQM-58-5ae"/>
+                <constraint firstAttribute="trailing" secondItem="Ng9-tU-bbf" secondAttribute="trailing" id="tnz-ry-1I7"/>
+            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="bc_nav bar" width="375" height="102"/>
     </resources>
 </document>
