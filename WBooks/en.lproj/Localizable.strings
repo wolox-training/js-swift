@@ -25,6 +25,8 @@
 /* Book Details Screen */
 "ADD_TO_WISHLIST_BUTTON" = "ADD TO WISHLIST";
 "RENT_BUTTON" = "RENT";
+"BOOK_AVAILABLE" = "Available";
+"BOOK_UNAVAILABLE" = "Not available";
 
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Rented";

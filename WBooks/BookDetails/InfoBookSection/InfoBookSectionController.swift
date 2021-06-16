@@ -24,14 +24,14 @@ class InfoBookSectionController: UIViewController {
     override func loadView() {
         super.loadView()
         self.view = infoBookSectionView
-        infoBookSectionView.addToWishListButton.setTitle(NSLocalizedString("ADD_TO_WISHLIST_BUTTON", comment: "Add to wishlist text button"), for: .normal)
-        infoBookSectionView.rentButton.setTitle(NSLocalizedString("RENT_BUTTON", comment: "Rent text button"), for: .normal)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         infoBookSectionView.configuration(with: infoBookSectionViewModel)
         infoBookSectionView.rentButton.addTarget(self, action: #selector(buttonRentPressed), for: .touchUpInside)
+        infoBookSectionView.addToWishListButton.setTitle(NSLocalizedString("ADD_TO_WISHLIST_BUTTON", comment: "Add to wishlist text button"), for: .normal)
+        infoBookSectionView.rentButton.setTitle(NSLocalizedString("RENT_BUTTON", comment: "Rent text button"), for: .normal)
     }
     
     @objc private func buttonRentPressed() {

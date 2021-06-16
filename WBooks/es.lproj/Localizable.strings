@@ -25,6 +25,8 @@
 /* Book Details Screen */
 "ADD_TO_WISHLIST_BUTTON" = "AGREGAR A LA LISTA DE DESEOS";
 "RENT_BUTTON" = "RESERVAR";
+"BOOK_AVAILABLE" = "Disponible";
+"BOOK_UNAVAILABLE" = "No disponible";
 
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Alqulado";

@@ -42,11 +42,11 @@ final class InfoBookSectionView: NibView {
     func availabilityText(status: Status) {
         switch status {
         case .available:
-            availabilityBook.text = "Available"
+            availabilityBook.text = NSLocalizedString("BOOK_AVAILABLE", comment: "Book available title")
             availabilityBook.textColor = .systemGreen
             rentButton.isEnabled = true
-        default:
-            availabilityBook.text = "Not available"
+        case .unavailable:
+            availabilityBook.text = NSLocalizedString("BOOK_UNAVAILABLE", comment: "Book unavailable title")
             availabilityBook.textColor = .systemRed
             rentButton.isEnabled = false
         }

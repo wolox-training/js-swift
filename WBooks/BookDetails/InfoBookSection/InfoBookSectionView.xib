@@ -35,7 +35,7 @@
                                 <constraint firstAttribute="width" constant="100" id="oOM-mY-fPM"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3U-e1-fOM" userLabel="Title">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3U-e1-fOM" userLabel="Title">
                             <rect key="frame" x="150" y="15" width="266" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <nil key="textColor"/>
@@ -60,12 +60,18 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoX-oK-mkU">
-                            <rect key="frame" x="25" y="185" width="391" height="30"/>
+                            <rect key="frame" x="25" y="171" width="391" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="DHU-Fx-gEB"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                             <state key="normal" title="ADD TO WISHLIST"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJc-iW-74W">
-                            <rect key="frame" x="25" y="230" width="391" height="44"/>
+                            <rect key="frame" x="25" y="226" width="391" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="sbv-Oi-1gF"/>
+                            </constraints>
                             <state key="normal" title="RENT" backgroundImage="img_main button">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -80,7 +86,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="s3U-e1-fOM" secondAttribute="trailing" constant="25" id="0q8-c7-PST"/>
-                        <constraint firstItem="zoX-oK-mkU" firstAttribute="top" secondItem="oD1-0w-4YT" secondAttribute="bottom" constant="20" id="3qw-0i-mzz"/>
+                        <constraint firstItem="zoX-oK-mkU" firstAttribute="top" secondItem="xx7-eo-v4k" secondAttribute="bottom" constant="10" id="3qw-0i-mzz"/>
                         <constraint firstAttribute="trailing" secondItem="F5b-0M-UUX" secondAttribute="trailing" constant="25" id="9Ef-7i-H4E"/>
                         <constraint firstItem="xx7-eo-v4k" firstAttribute="top" secondItem="F5b-0M-UUX" secondAttribute="bottom" constant="10" id="CCi-k9-0yY"/>
                         <constraint firstItem="s3U-e1-fOM" firstAttribute="leading" secondItem="oD1-0w-4YT" secondAttribute="trailing" constant="25" id="FrE-tH-tED"/>
@@ -96,7 +102,7 @@
                         <constraint firstItem="kRR-1N-yv9" firstAttribute="top" secondItem="s3U-e1-fOM" secondAttribute="bottom" constant="15" id="gTS-pG-gWt"/>
                         <constraint firstAttribute="trailing" secondItem="rJc-iW-74W" secondAttribute="trailing" constant="25" id="htA-ai-aY7"/>
                         <constraint firstItem="rJc-iW-74W" firstAttribute="leading" secondItem="8gO-5d-dSi" secondAttribute="leading" constant="25" id="j0a-YN-lJt"/>
-                        <constraint firstItem="rJc-iW-74W" firstAttribute="top" secondItem="zoX-oK-mkU" secondAttribute="bottom" constant="15" id="joH-DM-oll"/>
+                        <constraint firstItem="rJc-iW-74W" firstAttribute="top" secondItem="zoX-oK-mkU" secondAttribute="bottom" constant="10" id="joH-DM-oll"/>
                         <constraint firstAttribute="trailing" secondItem="xx7-eo-v4k" secondAttribute="trailing" constant="25" id="kb7-z6-AN6"/>
                         <constraint firstItem="F5b-0M-UUX" firstAttribute="top" secondItem="a7M-SL-vvV" secondAttribute="bottom" constant="10" id="taC-zQ-TTe"/>
                         <constraint firstAttribute="trailing" secondItem="kRR-1N-yv9" secondAttribute="trailing" constant="25" id="v2s-mf-s2Z"/>
