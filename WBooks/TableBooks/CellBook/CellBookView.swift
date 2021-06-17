@@ -29,9 +29,5 @@ final class CellBookView: UITableViewCell {
         titleBook.text = viewModel.title
         subtitleBook.text = viewModel.autor
         imageBook.load(from: viewModel.image)
-        
     }
-    
-   
-    
 }

@@ -24,6 +24,10 @@ class TableBookViewModel {
         return CellBookViewModel(book: books[indexPath.item])
     }
     
+    func createBookDetailsViewModel(at indexPath: IndexPath) -> BookDetailsViewModel {
+        return BookDetailsViewModel(book: books[indexPath.item])
+    }
+    
     func fetchBook(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let onFetchSuccess = { [weak self] (books: [Book]) in
             self?.books = books
