@@ -37,4 +37,4 @@
 "ALERT_ERROR_MESSAGE" = "Error al cargar los datos";
 "ALERT_ERROR_CLOSE" = "Cerrar";
 "ALERT_UNAVAILABLE_BOOK_MESSAGE" = "El libro no esta disponible";
-"ALERT_RENT_ERORR_MESSAGE" = "Alquilar libro fallo";
+"ALERT_RENT_ERROR_MESSAGE" = "Alquilar libro fallo";

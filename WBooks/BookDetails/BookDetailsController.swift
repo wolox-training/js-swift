@@ -9,12 +9,16 @@ import UIKit
 
 final class BookDetailsController: UIViewController {
     private lazy var bookDetailsView = BookDetailsView()
-    private let infoBookSectionController: InfoBookSectionController
+    private let viewModel: BookDetailsViewModel
+    private lazy var infoBookSectionController: InfoBookSectionController = {
+        let infoBookSectionViewModel = viewModel.createInfoBookSectionViewModel()
+        return InfoBookSectionController(bookSectionViewModel: infoBookSectionViewModel)
+    }()
 
     
     init(viewModel: BookDetailsViewModel) {
-        let infoBookSectionViewModel = viewModel.createInfoBookSectionViewModel()
-        infoBookSectionController = InfoBookSectionController(bookSectionViewModel: infoBookSectionViewModel)
+        self.viewModel = viewModel
+        
         super.init(nibName: nil, bundle: nil)
     }
     

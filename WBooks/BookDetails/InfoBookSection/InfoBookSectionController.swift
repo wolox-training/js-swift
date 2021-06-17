@@ -42,7 +42,7 @@ class InfoBookSectionController: UIViewController {
         }
     }
     
-    func showAlertRent() {
+    private func showAlertRent() {
         let alert = UIAlertController(title: NSLocalizedString("ALERT_ERROR_TITLE", comment: "Title error"),
                                       message: NSLocalizedString("ALERT_UNAVAILABLE_BOOK_MESSAGE", comment: "Message error"),
                                       preferredStyle: .alert)
@@ -50,15 +50,15 @@ class InfoBookSectionController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func onRentError(error: Error) {
+    private func onRentError(error: Error) {
         let alert = UIAlertController(title: NSLocalizedString("ALERT_ERROR_TITLE", comment: "Title error"),
-                                      message: NSLocalizedString("ALERT_RENT_ERORR_MESSAGE", comment: "Message error"),
+                                      message: NSLocalizedString("ALERT_RENT_ERROR_MESSAGE", comment: "Message error"),
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("ALERT_ERROR_CLOSE", comment: "Default action"), style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func onRentSuccess() {
+    private func onRentSuccess() {
         let alert = UIAlertController(title: NSLocalizedString("ALERT_RENT_SUCCESS_TITLE", comment: "Title error"),
                                       message: NSLocalizedString("ALERT_RENT_SUCCESS_MESSAGE", comment: "Message error"),
                                       preferredStyle: .alert)
@@ -66,7 +66,7 @@ class InfoBookSectionController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func requestBook() {
+    private func requestBook() {
         infoBookSectionViewModel.rentBook( onSuccess: { [weak self] in
                 self?.onRentSuccess()
             }, onError: { [weak self] error in
