@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-4K-cfv">
+                <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-4K-cfv">
                     <rect key="frame" x="20" y="122" width="374" height="720"/>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-tU-bbf">
@@ -30,11 +30,12 @@
                 <constraint firstAttribute="trailing" secondItem="UYc-4K-cfv" secondAttribute="trailing" constant="20" id="09m-Zp-d2Q"/>
                 <constraint firstItem="Ng9-tU-bbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GXQ-Lu-Cvu"/>
                 <constraint firstItem="UYc-4K-cfv" firstAttribute="top" secondItem="Ng9-tU-bbf" secondAttribute="bottom" constant="20" id="Sic-8M-y1w"/>
-                <constraint firstAttribute="bottom" secondItem="UYc-4K-cfv" secondAttribute="bottom" constant="54" id="ZKI-W8-MNO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UYc-4K-cfv" secondAttribute="bottom" constant="20" id="ZKI-W8-MNO"/>
                 <constraint firstItem="UYc-4K-cfv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="i94-bx-Ymq"/>
                 <constraint firstItem="Ng9-tU-bbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jQM-58-5ae"/>
                 <constraint firstAttribute="trailing" secondItem="Ng9-tU-bbf" secondAttribute="trailing" id="tnz-ry-1I7"/>
             </constraints>
+            <nil key="simulatedBottomBarMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </view>
     </objects>

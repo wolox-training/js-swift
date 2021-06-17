@@ -14,11 +14,15 @@ final class BookDetailsController: UIViewController {
         let infoBookSectionViewModel = viewModel.createInfoBookSectionViewModel()
         return InfoBookSectionController(bookSectionViewModel: infoBookSectionViewModel)
     }()
+    
+    private lazy var commentSectionController: CommentSectionController = {
+        let commentSectionViewModel = viewModel.createCommentSectionViewModel()
+        return CommentSectionController(commentSectionViewModel: commentSectionViewModel)
+    }()
 
     
     init(viewModel: BookDetailsViewModel) {
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,10 +38,11 @@ final class BookDetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationNavigationBar()
-        addInfoSection(infoBookSectionController)
+        addSection(infoBookSectionController)
+        addSection(commentSectionController)
     }
 
-    private func addInfoSection(_ child: UIViewController) {
+    private func addSection(_ child: UIViewController) {
         addChild(child)
         bookDetailsView.sections.addArrangedSubview(child.view)
         child.view.frame = bookDetailsView.sections.frame
