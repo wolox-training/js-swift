@@ -9,9 +9,18 @@ import Foundation
 
 struct Comment: Codable {
     let id: Int
-    let user_id: Int
-    let book_id: Int
+    let userId: Int
+    let bookId: Int
     let content: String
-    let created_at: String
-    let updated_at: String
+    let createdAt: String
+    let updatedAt: String
+    
+    enum CodingKeys: String, CodingKey {
+        case bookId = "book_id"
+        case userId = "user_id"
+        case id
+        case content
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+    }
 }

@@ -11,6 +11,7 @@ class CommentSectionViewModel {
     private var comments: [Comment] = []
     private var repositoryComment: CommentRepositoryProtocol
     private let bookId: Int
+    private static let maxComments: Int = 5
     
     init(bookId: Int, repositotyComment: CommentRepositoryProtocol = CommentRepository()) {
         self.repositoryComment = repositotyComment
@@ -18,7 +19,7 @@ class CommentSectionViewModel {
     }
     
     var numberOfComments: Int {
-        return comments.count
+        return min(CommentSectionViewModel.maxComments, comments.count)
     }
     
     func createCommentCellViewModel(at indexPath: IndexPath) -> CommentCellViewModel {

@@ -17,10 +17,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-4K-cfv">
+                <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-4K-cfv">
                     <rect key="frame" x="20" y="122" width="374" height="720"/>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-tU-bbf">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-tU-bbf">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                 </imageView>
             </subviews>

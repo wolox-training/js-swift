@@ -60,11 +60,7 @@ class CommentSectionController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count = commentSectionViewModel.numberOfComments
-        if count > 5 {
-            count = 5
-        }
-        return count
+        return commentSectionViewModel.numberOfComments
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

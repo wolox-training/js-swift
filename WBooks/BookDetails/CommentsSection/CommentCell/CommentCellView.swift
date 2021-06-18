@@ -19,10 +19,6 @@ final class CommentCellView: UITableViewCell {
         return String(describing: CommentCellView.self)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func configureCell(with viewModel: CommentCellViewModel) {
         userName.text = viewModel.userName
         userComment.text = viewModel.content

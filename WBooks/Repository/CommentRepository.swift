@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 protocol CommentRepositoryProtocol {
-    func fetchComments(bookId: Int ,onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void)
+    func fetchComments(bookId: Int,onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void)
 }
 
 public class CommentRepository: CommentRepositoryProtocol {
