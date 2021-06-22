@@ -9,6 +9,7 @@
 /* Titles views */
 "LIBRARY_TITLE" = "LIBRARY";
 "BOOK_DETAIL_TITLE" = "BOOK DETAIL";
+"ADD_NEW_TITLE" = "ADD NEW BOOK";
 
 /* TabBar titles */
 "LIBRARY_TABBAR" = "Library";
@@ -28,13 +29,27 @@
 "BOOK_AVAILABLE" = "Available";
 "BOOK_UNAVAILABLE" = "Not available";
 
+/* Add New Book Screen*/
+"NAME_BOOK_FIELD" = "Book's name";
+"AUTHOR_BOOK_FIELD" = "Author";
+"YEAR_BOOK_FIELD" = "Year";
+"TOPIC_BOOK_FIELD" = "Topic";
+"DESCRIPTION_BOOK_FIELD" = "Description";
+
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Rented";
 "ALERT_RENT_SUCCESS_MESSAGE" = "Book rented successfully";
+"ALERT_RENT_ERROR_MESSAGE" = "Rent book fails";
+
+/* Add New alert */
+"ALERT_SUBMIT_ERROR_MESSAGE" = "Add book fails";
+"ALERT_SUBMIT_SUCCESS_TITLE" = "Congratulations";
+"ALERT_SUBMIT_SUCCESS_MESSAGE" = "Book added successfully";
+"SUBMIT_BUTTON" = "SUBMIT";
 
 /* Error alert */
 "ALERT_ERROR_TITLE" = "Error";
 "ALERT_ERROR_MESSAGE" = "Loading data fails";
 "ALERT_ERROR_CLOSE" = "Close";
 "ALERT_UNAVAILABLE_BOOK_MESSAGE" = "The book is unavailable";
-"ALERT_RENT_ERROR_MESSAGE" = "Rent book fails";
+
