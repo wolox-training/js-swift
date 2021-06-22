@@ -18,4 +18,7 @@ class BookDetailsViewModel {
         return InfoBookSectionViewModel(book: book)
     }
     
+    func createCommentSectionViewModel() -> CommentSectionViewModel {
+        return CommentSectionViewModel(bookId: book.id)
+    }
 }
