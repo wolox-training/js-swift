@@ -9,5 +9,19 @@ import Foundation
 import UIKit
 
 final class BookDetailsView: NibView {
-    @IBOutlet weak var sections: UIStackView!
+    private static let cornerRadius: CGFloat = 7
+    
+    @IBOutlet weak var infoViewContainer: UIView!{
+        didSet {
+            infoViewContainer.layer.cornerRadius = BookDetailsView.cornerRadius
+            infoViewContainer.clipsToBounds = true
+        }
+    }
+
+    @IBOutlet weak var commentViewContainer: UIView!{
+        didSet {
+            commentViewContainer.layer.cornerRadius = BookDetailsView.cornerRadius
+            commentViewContainer.clipsToBounds = true
+        }
+    }
 }

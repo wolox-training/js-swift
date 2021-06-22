@@ -10,6 +10,8 @@ import UIKit
 
 extension UIButton {
     func gradientButton() {
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         let gradientLayer = CAGradientLayer()
         
         gradientLayer.colors = [
