@@ -22,7 +22,6 @@ open class CustomInputFields: UITextField {
     }
     
     func setup() {
-        addTarget(self, action: #selector(isValid), for: .editingChanged)
         
         self.borderStyle = .none
         self.layer.shadowColor = UIColor.gray.cgColor
@@ -32,12 +31,4 @@ open class CustomInputFields: UITextField {
         self.layer.shadowRadius = 0
     }
     
-    @objc func isValid() -> Bool {
-        if let validator = valid, let text = self.text {
-            let result = validator(text)
-            self.layer.shadowColor = result ? UIColor.gray.cgColor : UIColor.red.cgColor
-            return result
-        }
-        return true
-    }
 }
