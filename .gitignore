@@ -91,3 +91,6 @@ iOSInjectionProject/
 
 # ConfigurationFiles
 ConfigurationFiles/
+
+# OSX
+.DS_Store

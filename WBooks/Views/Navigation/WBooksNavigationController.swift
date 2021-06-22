@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 final class WBooksNavigationController: UINavigationController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {

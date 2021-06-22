@@ -4,12 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailsView" customModule="WBooks" customModuleProvider="target">
             <connections>
-                <outlet property="sections" destination="UYc-4K-cfv" id="hOu-Fi-h2e"/>
+                <outlet property="commentViewContainer" destination="49I-eB-8c0" id="iS6-Ck-f4o"/>
+                <outlet property="infoViewContainer" destination="Rbp-5Q-7Ue" id="MFr-kG-gJG"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,23 +19,34 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-4K-cfv">
-                    <rect key="frame" x="20" y="122" width="374" height="720"/>
-                </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-tU-bbf">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbp-5Q-7Ue" userLabel="Info View Container">
+                    <rect key="frame" x="20" y="122" width="374" height="280"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="Umr-0H-dgs"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49I-eB-8c0" userLabel="Comment View Container">
+                    <rect key="frame" x="20" y="422" width="374" height="420"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="UYc-4K-cfv" secondAttribute="trailing" constant="20" id="09m-Zp-d2Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rbp-5Q-7Ue" secondAttribute="trailing" constant="20" id="CWF-kz-RfI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="49I-eB-8c0" secondAttribute="trailing" constant="20" id="G47-Y7-ta9"/>
                 <constraint firstItem="Ng9-tU-bbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GXQ-Lu-Cvu"/>
-                <constraint firstItem="UYc-4K-cfv" firstAttribute="top" secondItem="Ng9-tU-bbf" secondAttribute="bottom" constant="20" id="Sic-8M-y1w"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UYc-4K-cfv" secondAttribute="bottom" constant="20" id="ZKI-W8-MNO"/>
-                <constraint firstItem="UYc-4K-cfv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="i94-bx-Ymq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="49I-eB-8c0" secondAttribute="bottom" constant="20" id="Ryh-Aw-SPG"/>
+                <constraint firstItem="Rbp-5Q-7Ue" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ZCb-7F-i8p"/>
+                <constraint firstItem="49I-eB-8c0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="akU-Ut-AMc"/>
+                <constraint firstItem="Rbp-5Q-7Ue" firstAttribute="top" secondItem="Ng9-tU-bbf" secondAttribute="bottom" constant="20" id="ayV-Hf-mmP"/>
                 <constraint firstItem="Ng9-tU-bbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jQM-58-5ae"/>
                 <constraint firstAttribute="trailing" secondItem="Ng9-tU-bbf" secondAttribute="trailing" id="tnz-ry-1I7"/>
+                <constraint firstItem="49I-eB-8c0" firstAttribute="top" secondItem="Rbp-5Q-7Ue" secondAttribute="bottom" constant="20" id="vdj-MJ-1XN"/>
             </constraints>
             <nil key="simulatedBottomBarMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
@@ -41,5 +54,8 @@
     </objects>
     <resources>
         <image name="bc_nav bar" width="375" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -38,19 +38,28 @@ final class BookDetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationNavigationBar()
-        addSection(infoBookSectionController)
-        addSection(commentSectionController)
-    }
-
-    private func addSection(_ child: UIViewController) {
-        addChild(child)
-        bookDetailsView.sections.addArrangedSubview(child.view)
-        child.view.frame = bookDetailsView.sections.frame
-        child.didMove(toParent: self)
+        load(controller: infoBookSectionController, in: bookDetailsView.infoViewContainer)
+        load(controller: commentSectionController, in: bookDetailsView.commentViewContainer)
     }
     
     func configurationNavigationBar() {
         // Set Title
         navigationItem.title = NSLocalizedString("BOOK_DETAIL_TITLE", comment: "Title for the navigation bar")
+    }
+}
+
+extension UIViewController {
+    
+    func load(controller: UIViewController, in container: UIView) {
+        addChild(controller)
+        container.addSubview(controller.view)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            controller.view.topAnchor.constraint(equalTo: container.topAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+            controller.view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: container.trailingAnchor)
+        ])
+        controller.didMove(toParent: self)
     }
 }
