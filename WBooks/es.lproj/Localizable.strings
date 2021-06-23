@@ -9,6 +9,7 @@
 /* Titles views */
 "LIBRARY_TITLE" = "BIBLIOTECA";
 "BOOK_DETAIL_TITLE" = "DETALLES LIBRO";
+"ADD_NEW_TITLE" = "AGREGAR NUEVO LIBRO";
 
 /* TabBar titles */
 "LIBRARY_TABBAR" = "Biblioteca";
@@ -28,13 +29,30 @@
 "BOOK_AVAILABLE" = "Disponible";
 "BOOK_UNAVAILABLE" = "No disponible";
 
+/* Add New Book Screen*/
+"NAME_BOOK_FIELD" = "Nombre del libro";
+"AUTHOR_BOOK_FIELD" = "Autor";
+"YEAR_BOOK_FIELD" = "Año";
+"TOPIC_BOOK_FIELD" = "Genero";
+"DESCRIPTION_BOOK_FIELD" = "Descripción";
+"ACTION_GALLERY_TITLE" = "Galeria";
+"ACTION_CAMERA_TITLE" = "Camara";
+"ACTION_CANCEL_TITLE" = "Cancelar";
+
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Alqulado";
 "ALERT_RENT_SUCCESS_MESSAGE" = "Libro alquilado con exito";
+"ALERT_RENT_ERROR_MESSAGE" = "Alquilar libro fallo";
+
+/* Add New alert */
+"ALERT_SUBMIT_ERROR_MESSAGE" = "Agregar libro fallo";
+"ALERT_SUBMIT_SUCCESS_TITLE" = "Felicitaciones";
+"ALERT_SUBMIT_SUCCESS_MESSAGE" = "Libro agregado con exito";
+"SUBMIT_BUTTON" = "ENVIAR";
 
 /* Error alert */
 "ALERT_ERROR_TITLE" = "Error";
 "ALERT_ERROR_MESSAGE" = "Error al cargar los datos";
 "ALERT_ERROR_CLOSE" = "Cerrar";
 "ALERT_UNAVAILABLE_BOOK_MESSAGE" = "El libro no esta disponible";
-"ALERT_RENT_ERROR_MESSAGE" = "Alquilar libro fallo";
+

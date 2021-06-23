@@ -10,6 +10,7 @@ import Alamofire
 
 protocol BookRepositoryProtocol {
     func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void)
+    func addBook(book: UnidentifiedBook, onSuccess: @escaping (UnidentifiedBook) -> Void, onError: @escaping (Error) -> Void)
 }
 
 public class BookRepository: BookRepositoryProtocol {
@@ -33,6 +34,33 @@ public class BookRepository: BookRepositoryProtocol {
                         return
                     }
                     onSuccess(books)
+                case .failure(let error):
+                    onError(error)
+                }
+            })
+    }
+    
+    func addBook(book: UnidentifiedBook, onSuccess: @escaping (UnidentifiedBook) -> Void, onError: @escaping (Error) -> Void) {
+        
+        guard let url = URL(string: "\(BookRepository.baseURL)\(BookRepository.booksPath)") else { return }
+        AF
+            .request(url,
+                     method: .post,
+                     parameters: book,
+                     encoder: JSONParameterEncoder.default)
+            .responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success(let value):
+                    guard let JSONBook = try? JSONSerialization.data(withJSONObject: value, options: [])
+                    else {
+                        onError(BookError.decodeError)
+                        return
+                    }
+                    guard let response = try? JSONDecoder().decode(UnidentifiedBook.self, from: JSONBook) else {
+                        onError(BookError.decodeError)
+                        return
+                    }
+                    onSuccess(response)
                 case .failure(let error):
                     onError(error)
                 }

@@ -28,7 +28,7 @@ class TabBarController: UITabBarController {
         wishList.tabBarItem.image = UIImage(named: "ic_wishlist.png")
         wishList.tabBarItem.tag = 1
         // Add New controller
-        let addNew = WBooksNavigationController(rootViewController: TableBookController(bookViewModel: TableBookViewModel()))
+        let addNew = WBooksNavigationController(rootViewController: NewBookController(newBookViewModel: NewBookViewModel()))
         addNew.tabBarItem = UITabBarItem()
         addNew.tabBarItem.title = NSLocalizedString("ADDNEW_TABBAR", comment: "Title of add new button in tab bar")
         addNew.tabBarItem.image = UIImage(named: "ic_add new.png")
