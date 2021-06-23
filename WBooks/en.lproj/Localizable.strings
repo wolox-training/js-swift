@@ -35,6 +35,9 @@
 "YEAR_BOOK_FIELD" = "Year";
 "TOPIC_BOOK_FIELD" = "Topic";
 "DESCRIPTION_BOOK_FIELD" = "Description";
+"ACTION_GALLERY_TITLE" = "Gallery";
+"ACTION_CAMERA_TITLE" = "Camera";
+"ACTION_CANCEL_TITLE" = "Cancel";
 
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Rented";

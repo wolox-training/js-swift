@@ -16,18 +16,13 @@ class NewBookViewModel {
     
     func addBook(book: UnidentifiedBook,onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         if book.isValid() {
-            let onAddSuccess = { [weak self] (book: UnidentifiedBook) in
+            let onAddSuccess = { (book: UnidentifiedBook) in
                 onSuccess()
             }
             bookRepository.addBook(book: book, onSuccess: onAddSuccess, onError: onError)
         } else {
             onError(NewBookViewError.bookFail)
         }
-    }
-    
-    func setValidate(inputField: CustomInputFields) {
-        let validate = { (value: String) in return !value.isEmpty }
-        inputField.setValidate(validate)
     }
 }
 

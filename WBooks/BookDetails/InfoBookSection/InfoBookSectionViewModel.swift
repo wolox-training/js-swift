@@ -41,7 +41,7 @@ class InfoBookSectionViewModel {
     }
     
     func rentBook(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
-        let onRentSuccess = { [weak self] (rent: Rent) in
+        let onRentSuccess = { (rent: Rent) in
             onSuccess()
         }
         rentRepository.rentBook(bookId: book.id, onSuccess: onRentSuccess, onError: onError)

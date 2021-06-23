@@ -10,7 +10,7 @@ import UIKit
 
 final class NewBookController: UIViewController {
     private lazy var newBookView = NewBookView()
-    let newBookViewModel: NewBookViewModel
+    private let newBookViewModel: NewBookViewModel
     
     
     init(newBookViewModel: NewBookViewModel) {
@@ -32,11 +32,15 @@ final class NewBookController: UIViewController {
         newBookView.imageBookButton.addTarget(self, action: #selector(imageBookButtonPressed), for: .touchUpInside)
         newBookView.submitButton.addTarget(self, action: #selector(submitButtonPressed), for: .touchUpInside)
         newBookView.submitButton.setTitle(NSLocalizedString("SUBMIT_BUTTON", comment: "Submit text button"), for: .normal)
-        
-        newBookViewModel.setValidate(inputField: newBookView.bookNameInput)
-        newBookViewModel.setValidate(inputField: newBookView.bookAuthorInput)
-        newBookViewModel.setValidate(inputField: newBookView.bookYearInput)
-        newBookViewModel.setValidate(inputField: newBookView.bookTopicInput)
+        setupValidation()
+    }
+    
+    func setupValidation() {
+        let validate = { (value: String) in return !value.isEmpty }
+        newBookView.bookNameInput.setValidate(validate)
+        newBookView.bookAuthorInput.setValidate(validate)
+        newBookView.bookYearInput.setValidate(validate)
+        newBookView.bookTopicInput.setValidate(validate)
     }
     
     func configurationNavigationBar() {
@@ -66,7 +70,7 @@ final class NewBookController: UIViewController {
         let alertController = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
         
         // Gallery option
-        let chooseAction = UIAlertAction(title: "Gallery", style: .default) { _ in
+        let chooseAction = UIAlertAction(title: NSLocalizedString("ACTION_GALLERY_TITLE", comment: "Gallery action"), style: .default) { _ in
             let imagePickerController = UIImagePickerController()
             imagePickerController.delegate = self
             imagePickerController.sourceType = .photoLibrary
@@ -76,7 +80,7 @@ final class NewBookController: UIViewController {
         
         // Camera option
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let takeAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            let takeAction = UIAlertAction(title: NSLocalizedString("ACTION_CAMERA_TITLE", comment: "Camera action"), style: .default) { _ in
                 let imagePickerController = UIImagePickerController()
                 imagePickerController.delegate = self
                 imagePickerController.sourceType = .camera
@@ -86,7 +90,7 @@ final class NewBookController: UIViewController {
         }
 
         // Cancel option
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: .none)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("ACTION_CANCEL_TITLE", comment: "Cancel action"), style: .cancel, handler: .none)
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)
@@ -118,9 +122,9 @@ final class NewBookController: UIViewController {
 
 }
 
-extension NewBookController: UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+extension NewBookController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         newBookView.imageBookButton.setBackgroundImage(image, for: .normal)
         picker.dismiss(animated: true, completion: nil)
     }

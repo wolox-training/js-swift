@@ -35,6 +35,9 @@
 "YEAR_BOOK_FIELD" = "Año";
 "TOPIC_BOOK_FIELD" = "Genero";
 "DESCRIPTION_BOOK_FIELD" = "Descripción";
+"ACTION_GALLERY_TITLE" = "Galeria";
+"ACTION_CAMERA_TITLE" = "Camara";
+"ACTION_CANCEL_TITLE" = "Cancelar";
 
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Alqulado";

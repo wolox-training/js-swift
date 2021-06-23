@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-open class CustomInputFields: UITextField {
+internal class CustomInputFields: UITextField {
     private var valid: ((String) -> Bool)?
     
     override init(frame: CGRect) {
