@@ -32,6 +32,11 @@ final class NewBookController: UIViewController {
         newBookView.imageBookButton.addTarget(self, action: #selector(imageBookButtonPressed), for: .touchUpInside)
         newBookView.submitButton.addTarget(self, action: #selector(submitButtonPressed), for: .touchUpInside)
         newBookView.submitButton.setTitle(NSLocalizedString("SUBMIT_BUTTON", comment: "Submit text button"), for: .normal)
+        
+        newBookViewModel.setValidate(inputField: newBookView.bookNameInput)
+        newBookViewModel.setValidate(inputField: newBookView.bookAuthorInput)
+        newBookViewModel.setValidate(inputField: newBookView.bookYearInput)
+        newBookViewModel.setValidate(inputField: newBookView.bookTopicInput)
     }
     
     func configurationNavigationBar() {

@@ -24,6 +24,11 @@ class NewBookViewModel {
             onError(NewBookViewError.bookFail)
         }
     }
+    
+    func setValidate(inputField: CustomInputFields) {
+        let validate = { (value: String) in return !value.isEmpty }
+        inputField.setValidate(validate)
+    }
 }
 
 enum NewBookViewError: Error{
