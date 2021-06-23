@@ -14,7 +14,7 @@ class NewBookViewModel {
         self.bookRepository = bookRepositoty
     }
     
-    func addBook(book: UnidentifiedBook,onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+    func addBook(book: UnidentifiedBook, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         if book.isValid() {
             let onAddSuccess = { (book: UnidentifiedBook) in
                 onSuccess()
