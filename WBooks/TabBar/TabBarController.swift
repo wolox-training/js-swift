@@ -34,7 +34,7 @@ class TabBarController: UITabBarController {
         addNew.tabBarItem.image = UIImage(named: "ic_add new.png")
         addNew.tabBarItem.tag = 2
         // Rentals controller
-        let rentals = WBooksNavigationController(rootViewController: TableBookController(bookViewModel: TableBookViewModel()))
+        let rentals = WBooksNavigationController(rootViewController: RentalsController(rentViewModel: RentalsViewModel()))
         rentals.tabBarItem = UITabBarItem()
         rentals.tabBarItem.title = NSLocalizedString("RENTALS_TABBAR", comment: "Title of rentals button in tab bar")
         rentals.tabBarItem.image = UIImage(named: "ic_myrentals.png")

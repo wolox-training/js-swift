@@ -29,6 +29,10 @@
 		BF11E235267A7519000F851F /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11E234267A7519000F851F /* CommentRepository.swift */; };
 		BF18907F2672743400C95A29 /* WBooksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18907E2672743400C95A29 /* WBooksNavigationController.swift */; };
 		BF69C6EC2672919200E618B8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69C6EB2672919200E618B8 /* TabBarController.swift */; };
+		BF6B653A268368ED006E4C23 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B6539268368ED006E4C23 /* RentalsView.swift */; };
+		BF6B653C2683693B006E4C23 /* RentalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B653B2683693B006E4C23 /* RentalsController.swift */; };
+		BF6B653E2683694D006E4C23 /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B653D2683694D006E4C23 /* RentalsViewModel.swift */; };
+		BF6B65402683695B006E4C23 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6B653F2683695B006E4C23 /* RentalsView.xib */; };
 		BF7AA0502670DDA300EB490D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7AA04F2670DDA300EB490D /* Book.swift */; };
 		BF7AA0532670F3E800EB490D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF7AA0552670F3E800EB490D /* Localizable.strings */; };
 		BF7CEF5C2682385B00D93D5F /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CEF5B2682385B00D93D5F /* Rent.swift */; };
@@ -105,6 +109,10 @@
 		BF11E234267A7519000F851F /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
 		BF18907E2672743400C95A29 /* WBooksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksNavigationController.swift; sourceTree = "<group>"; };
 		BF69C6EB2672919200E618B8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = WBooks/TabBar/TabBarController.swift; sourceTree = SOURCE_ROOT; };
+		BF6B6539268368ED006E4C23 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
+		BF6B653B2683693B006E4C23 /* RentalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsController.swift; sourceTree = "<group>"; };
+		BF6B653D2683694D006E4C23 /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
+		BF6B653F2683695B006E4C23 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
 		BF7AA04F2670DDA300EB490D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BF7AA0542670F3E800EB490D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF7CEF5B2682385B00D93D5F /* Rent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
@@ -228,6 +236,17 @@
 				BF11E230267A474D000F851F /* CommentCellView.xib */,
 			);
 			path = CommentCell;
+			sourceTree = "<group>";
+		};
+		BF6B6538268368A0006E4C23 /* Rentals */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B653B2683693B006E4C23 /* RentalsController.swift */,
+				BF6B653D2683694D006E4C23 /* RentalsViewModel.swift */,
+				BF6B6539268368ED006E4C23 /* RentalsView.swift */,
+				BF6B653F2683695B006E4C23 /* RentalsView.xib */,
+			);
+			path = Rentals;
 			sourceTree = "<group>";
 		};
 		BF7CEF592682341900D93D5F /* Models */ = {
@@ -355,6 +374,7 @@
 		BFFB81E32669053C00979253 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B6538268368A0006E4C23 /* Rentals */,
 				BF842DD9267D1BB200A0CFB3 /* NewBook */,
 				BF06D6872677C62F007C5388 /* BookDetails */,
 				BFE9BF132672911600C21494 /* TabBar */,
@@ -520,6 +540,7 @@
 				BF11E22A267A4579000F851F /* CommentSectionView.xib in Resources */,
 				BFD65E58266AA65600B61FD0 /* TableBookView.xib in Resources */,
 				BFFB81EE2669053D00979253 /* Assets.xcassets in Resources */,
+				BF6B65402683695B006E4C23 /* RentalsView.xib in Resources */,
 				BFD65E52266A981800B61FD0 /* LoginView.xib in Resources */,
 				BF06D6A52677D55D007C5388 /* InfoBookSectionView.xib in Resources */,
 				BFD65E5F266AA93400B61FD0 /* CellBookView.xib in Resources */,
@@ -651,9 +672,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6B653E2683694D006E4C23 /* RentalsViewModel.swift in Sources */,
 				BFD65E56266AA64400B61FD0 /* TableBookView.swift in Sources */,
 				BF06D69F2677D4B8007C5388 /* InfoBookSectionController.swift in Sources */,
 				BF06D6962677D000007C5388 /* BookDetailsController.swift in Sources */,
+				BF6B653C2683693B006E4C23 /* RentalsController.swift in Sources */,
 				BF7CEF5C2682385B00D93D5F /* Rent.swift in Sources */,
 				BF69C6EC2672919200E618B8 /* TabBarController.swift in Sources */,
 				BF11E22D267A472A000F851F /* CommentCellView.swift in Sources */,
@@ -683,6 +706,7 @@
 				BF11E235267A7519000F851F /* CommentRepository.swift in Sources */,
 				BFFB81E52669053C00979253 /* AppDelegate.swift in Sources */,
 				BF02A6BB26792EA000B7C60D /* RentRepository.swift in Sources */,
+				BF6B653A268368ED006E4C23 /* RentalsView.swift in Sources */,
 				BFFB81E72669053C00979253 /* SceneDelegate.swift in Sources */,
 				BF90CA3C267383DF006D5F2E /* CellBookViewModel.swift in Sources */,
 				BF11E228267A4569000F851F /* CommentSectionView.swift in Sources */,
