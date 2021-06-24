@@ -26,6 +26,10 @@ class RentalsViewModel {
         return CellBookViewModel(book: booksRents[indexPath.item])
     }
     
+    func createSuggestionViewModel() -> SuggestionViewModel {
+        return SuggestionViewModel()
+    }
+    
     func fetchRentals(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let onFetchSuccess = { [weak self] (books: [Rent]) in
             self?.rentals = books

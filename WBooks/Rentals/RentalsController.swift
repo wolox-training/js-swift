@@ -11,6 +11,11 @@ import UIKit
 final class RentalsController: UITableViewController {
     private lazy var rentalsView = RentalsView()
     private let rentalsViewModel: RentalsViewModel
+    private lazy var suggestionController: SuggestionController = {
+        let sugViewModel = rentalsViewModel.createSuggestionViewModel()
+        return SuggestionController(suggestionViewModel: sugViewModel)
+    }()
+
     
     init(rentViewModel: RentalsViewModel) {
         self.rentalsViewModel = rentViewModel
@@ -31,6 +36,7 @@ final class RentalsController: UITableViewController {
         configurationTable()
         configurationNavigationBar()
         loadRentals()
+        load(controller: suggestionController, in: rentalsView.suggestionView)
     }
 
     func configurationTable() {
@@ -83,4 +89,3 @@ final class RentalsController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search.png"), style: .plain, target: nil, action: nil)
     }
 }
-

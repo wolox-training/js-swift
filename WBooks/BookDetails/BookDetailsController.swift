@@ -19,7 +19,6 @@ final class BookDetailsController: UIViewController {
         let commentSectionViewModel = viewModel.createCommentSectionViewModel()
         return CommentSectionController(commentSectionViewModel: commentSectionViewModel)
     }()
-
     
     init(viewModel: BookDetailsViewModel) {
         self.viewModel = viewModel
