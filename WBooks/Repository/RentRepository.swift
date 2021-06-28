@@ -10,10 +10,12 @@ import Alamofire
 
 protocol RentRepositoryProtocol {
     func rentBook(bookId: Int, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void)
+    func fetchRentals(userId: Int, onSuccess: @escaping ([Rent]) -> Void, onError: @escaping (Error) -> Void)
 }
 
 public class RentRepository: RentRepositoryProtocol {
     private static let baseURL: String = "https://ios-training-backend.herokuapp.com/api/v1"
+    private static let usersPath: String = "/users/"
     private static let rentPath: String = "/rents"
     
     
@@ -45,6 +47,29 @@ public class RentRepository: RentRepositoryProtocol {
                         return
                     }
                     guard let rents = try? JSONDecoder().decode(Rent.self, from: JSONRent) else {
+                        onError(RentError.decodeError)
+                        return
+                    }
+                    onSuccess(rents)
+                case .failure(let error):
+                    onError(error)
+                }
+            })
+    }
+    
+    func fetchRentals(userId: Int, onSuccess: @escaping ([Rent]) -> Void, onError: @escaping (Error) -> Void) {
+        guard let url = URL(string: "\(RentRepository.baseURL)\(RentRepository.usersPath)\(userId)\(RentRepository.rentPath)") else { return }
+        AF
+            .request(url, method: .get)
+            .responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success(let value):
+                    guard let JSONRentals = try? JSONSerialization.data(withJSONObject: value, options: [])
+                    else {
+                        onError(RentError.decodeError)
+                        return
+                    }
+                    guard let rents = try? JSONDecoder().decode([Rent].self, from: JSONRentals) else {
                         onError(RentError.decodeError)
                         return
                     }

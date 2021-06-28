@@ -10,6 +10,7 @@
 "LIBRARY_TITLE" = "BIBLIOTECA";
 "BOOK_DETAIL_TITLE" = "DETALLES LIBRO";
 "ADD_NEW_TITLE" = "AGREGAR NUEVO LIBRO";
+"RENTALS_TITLE" = "MIS LIBROS";
 
 /* TabBar titles */
 "LIBRARY_TABBAR" = "Biblioteca";
@@ -38,6 +39,9 @@
 "ACTION_GALLERY_TITLE" = "Galeria";
 "ACTION_CAMERA_TITLE" = "Camara";
 "ACTION_CANCEL_TITLE" = "Cancelar";
+
+/* Suggestion view */
+"SUGGESTION_LABEL_TITLE" = "Sugerencias";
 
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Alqulado";

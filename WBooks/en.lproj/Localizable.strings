@@ -10,6 +10,7 @@
 "LIBRARY_TITLE" = "LIBRARY";
 "BOOK_DETAIL_TITLE" = "BOOK DETAIL";
 "ADD_NEW_TITLE" = "ADD NEW BOOK";
+"RENTALS_TITLE" = "MY RENTALS";
 
 /* TabBar titles */
 "LIBRARY_TABBAR" = "Library";
@@ -38,6 +39,9 @@
 "ACTION_GALLERY_TITLE" = "Gallery";
 "ACTION_CAMERA_TITLE" = "Camera";
 "ACTION_CANCEL_TITLE" = "Cancel";
+
+/* Suggestion view */
+"SUGGESTION_LABEL_TITLE" = "Suggestions";
 
 /* Rent alert */
 "ALERT_RENT_SUCCESS_TITLE" = "Rented";
