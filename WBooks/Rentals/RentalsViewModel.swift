@@ -10,12 +10,12 @@ import Foundation
 class RentalsViewModel {
     private var rentals: [Rent] = []
     private var booksRents: [Book] = []
-    private let repositoryRent: RentRepositoryProtocol
-    private let repositoryBook: BookRepositoryProtocol
+    private let rentRepository: RentRepositoryProtocol
+    private let bookRepository: BookRepositoryProtocol
     
-    init(repositoryRent: RentRepositoryProtocol = RentRepository(), repositoryBook: BookRepositoryProtocol = BookRepository()) {
-        self.repositoryRent = repositoryRent
-        self.repositoryBook = repositoryBook
+    init(rentRepository: RentRepositoryProtocol = RentRepository(), bookRepository: BookRepositoryProtocol = BookRepository()) {
+        self.rentRepository = rentRepository
+        self.bookRepository = bookRepository
     }
     
     var numberofRentals: Int {
@@ -35,18 +35,19 @@ class RentalsViewModel {
             self?.rentals = books
             self?.fetchBookRentals(onSuccess: onSuccess, onError: onError)
         }
-        repositoryRent.fetchRentals(userId: 11, onSuccess: onFetchSuccess, onError: onError)
+        rentRepository.fetchRentals(userId: 11, onSuccess: onFetchSuccess, onError: onError)
     }
     
     func fetchBookRentals(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let onFetchSuccess = { [weak self] (books: [Book]) in
-            for rent in self?.rentals ?? [] {
+            guard let self = self else { return }
+            for rent in self.rentals {
                 if let book = books.first(where: { book in book.id == rent.bookId }) {
-                    self?.booksRents.append(book)
+                    self.booksRents.append(book)
                 }
             }
             onSuccess()
         }
-        repositoryBook.fetchBooks(onSuccess: onFetchSuccess, onError: onError)
+        bookRepository.fetchBooks(onSuccess: onFetchSuccess, onError: onError)
     }
 }

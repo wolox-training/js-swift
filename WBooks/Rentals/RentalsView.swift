@@ -10,7 +10,6 @@ import UIKit
 
 final class RentalsView: NibView {
     
-    
     @IBOutlet weak var rentalsTable: UITableView!
     @IBOutlet weak var suggestionView: UIView!
 }
