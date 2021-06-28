@@ -9,12 +9,14 @@ import XCTest
 @testable import WBooks
 
 class MockBookRepository: BookRepositoryProtocol {
-    let bookJSON = """
-                    { "title": "Testing", "author": "Juan Silva", "genre": "Coding", "year": "2021", "image": "URLImageBook", "status": "Unavailable" }
-                   """
+    private var bookJSON: String!
 
+    init(bookJson: String) {
+        self.bookJSON = bookJson
+    }
+    
     func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
-        
+        // no-op
     }
     
     func addBook(book: UnidentifiedBook, onSuccess: @escaping (UnidentifiedBook) -> Void, onError: @escaping (Error) -> Void) {
