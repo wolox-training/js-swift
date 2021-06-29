@@ -10,20 +10,21 @@ import XCTest
 
 class NewBookViewModelTests: XCTestCase {
     
-    func testAddBook() throws {
+    func testAddBook() {
         let bookJSON = """
                         { "title": "Testing", "author": "Juan Silva", "genre": "Coding", "year": "2021", "image": "URLImageBook", "status": "Unavailable" }
                        """
-        
-        let newBookViewModel = NewBookViewModel(bookRepositoty: MockBookRepository(bookJson: bookJSON))
+
+        let bookRepository = MockBookRepository(bookJson: bookJSON)
+        let newBookViewModel = NewBookViewModel(bookRepositoty: bookRepository)
         let book = UnidentifiedBook(title: "Testing", author: "Juan Silva", genre: "Coding", year: "2021", image: "URLImageBook", status: Status.unavailable)
         
-        let promise = expectation(description: "Book add")
-        let onSuccess = { promise.fulfill() }
+        let bookExpectation = expectation(description: "Book add")
+        let onSuccess = { bookExpectation.fulfill() }
         let onError = { (error: Error) in XCTFail("Error \(error)") }
         
         newBookViewModel.addBook(book: book, onSuccess: onSuccess, onError: onError)
-        wait(for: [promise], timeout: 15)
+        wait(for: [bookExpectation], timeout: 15)
     }
 
 }

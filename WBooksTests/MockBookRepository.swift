@@ -9,7 +9,7 @@ import XCTest
 @testable import WBooks
 
 class MockBookRepository: BookRepositoryProtocol {
-    private var bookJSON: String!
+    private let bookJSON: String
 
     init(bookJson: String) {
         self.bookJSON = bookJson
